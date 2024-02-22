@@ -45,7 +45,6 @@ local WazaIDs = {
     SOLAR_BLAST = 59,
     SPIRIT_FIRE = 36,
     SPIRIT_FLAME = 95,
-    SPIRIT_FIRE = 40,
     SPARK_BLAST = 73,
     SPINE_VINE = 62,
     STONE_BLAST = 88,

@@ -5,13 +5,16 @@ Debbuger.Path = ".\\Mods\\shared\\"
 
 ---@param message string
 function Debbuger.log(message)
-    print(Debbuger.prefix .. message)
-    local file = io.open(Debbuger.Path .. "Logs.txt", "a")
-    local time = os.date("[%H:%M:%S]")
-    file:write(time .. " " .. message .."\n")
-    file:close()
+    local file, err = io.open(Debbuger.Path .. "Logs.txt", "a")
+    if not file then
+        file = io.open(Debbuger.Path .. "Logs.txt", "w")
+    end
+    if file then
+        local time = os.date("[%H:%M:%S]")
+        file:write(time .. " " .. message .."\n")
+        file:close()
+    end
 end
-
 
 --This code is poorly optimized and should be done in future versions, but works well for debugging purposes
 
