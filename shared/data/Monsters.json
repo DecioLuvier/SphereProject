@@ -1,0 +1,51 @@
+{
+    "Godnubis": {
+        "ID": "Anubis",
+        "Level": 35,
+        "Level_Max": 35,
+        "Num": 1,
+        "Num_Max": 1,
+        "Stats": {
+            "NickName": "The Pharaoh",
+            "IsRarePal": true,
+            "Rank": 5,  
+            "Rank_HP": 5,
+            "Rank_Attack": 5,
+            "Rank_Defence": 5,
+            "Rank_CraftSpeed": 5,
+            "Talent_HP": 100,
+            "Talent_Melee": 100,
+            "Talent_Shot": 100,
+            "Talent_Defense": 100
+        },
+        "PassiveSkillList": [
+            "Lucky",
+            "Legend",
+            "Artisan",
+            "Serious"
+        ],
+        "EquipedSkills": [
+            "IGNIS_BLAST",
+            "SOLAR_BLAST",
+            "SPARK_BLAST"
+        ],
+        "MasteredSkills": [
+            "POWER_BOMB",
+            "SAND_TORNADO"
+        ]
+    },
+    "Test": {
+        "ID": "Ronin",
+        "Level": 1,
+        "Level_Max": 10,
+        "Num": 1,
+        "Num_Max": 4,
+        "Stats": {
+            "IsRarePal": true
+        },
+        "PassiveSkillList": [
+            "Coward",
+            "Pacifist"
+        ]
+    }
+}

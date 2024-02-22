@@ -1,0 +1,74 @@
+local Static = require("scripts/Static")
+
+local Permissions = require("enums/Permissions")
+
+local Player = {}
+
+---@param PlayerController APalPlayerController
+---@return string
+function Player.GetPermissionName(PlayerController)
+    if PlayerController.bAdmin then
+        return "Admin"
+    else
+        return "Member"
+    end
+end
+
+---@param input string
+---@param target string
+function Player.ComparatePermissionLevel(input,target)
+    if Permissions[input] >= Permissions[target] then
+        return true
+    else
+        return false
+    end
+end
+
+---@param PlayerController APalPlayerController
+---@return APalNetworkTransmitter
+function Player.GetNetworkTransmitter(PlayerController)
+    local PalPlayerCharacter = PlayerController:GetControlPalCharacter()
+    local PalUtility = Static:GetPalUtility()
+    return PalUtility:GetNetworkTransmitterByPlayerCharacter(PalPlayerCharacter)
+end
+
+---@param PlayerController APalPlayerController
+---@return UPalNetworkPlayerComponent
+function Player.GetPalNetworkPlayerComponent(PlayerController)
+    local NetworkTransmitter = Player.GetNetworkTransmitter(PlayerController)
+    return NetworkTransmitter:GetPlayer()
+end
+
+---@param PlayerController APalPlayerController
+---@return string
+function Player.GetSteamName(PlayerController)
+    local PalPlayerState = PlayerController:GetPalPlayerState()
+    return PalPlayerState.PlayerNamePrivate:ToString()
+end
+
+---@param Id string|number
+---@return APalPlayerController
+function Player.GetController(Id)
+    local players = FindAllOf("PalPlayerController")
+    for i = 1, #players do
+        local player = players[i] ---@type APalPlayerController
+        local SteamName = Player.GetSteamName(player)
+        if SteamName then
+            if string.lower(tostring(Id)) == string.lower(SteamName) then
+                return player
+            end
+        end
+        local playerState = player:GetPalPlayerState()
+        if playerState then
+            if tonumber(Id) == playerState.PlayerUId.A then
+                return player
+            end
+        end
+        if Id == playerState.PlayerId then
+            return player
+        end
+    end
+    return nil
+end
+
+return Player

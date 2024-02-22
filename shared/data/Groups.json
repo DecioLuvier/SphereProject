@@ -1,0 +1,12 @@
+{
+    "Gods": [
+        "Godnubis",
+        {
+            "ID": "RaijinDaughter",
+            "Level": 10,
+            "Level_Max": 20,
+            "Num": 2,
+            "Num_Max": 4
+        }
+    ]
+}

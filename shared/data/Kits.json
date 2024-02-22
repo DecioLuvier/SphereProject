@@ -1,0 +1,129 @@
+{
+    "Noob": {
+        "PermissionLevel": "Member",
+        "Reset": "Never",
+        "items": [
+            {
+                "ItemID": "Pickaxe_Tier_00",
+                "Quantity": 1
+            },
+            {
+                "ItemID": "Axe_Tier_00",
+                "Quantity": 1
+            },
+            {
+                "ItemID": "Torch",
+                "Quantity": 1
+            },
+            {
+                "ItemID": "Wooden Club",
+                "Quantity": 1
+            },
+            {
+                "ItemID": "PalSphere",
+                "Quantity": 5
+            }
+        ]
+    },
+    "Pro": {
+        "PermissionLevel": "Vip1",
+        "Reset": "Never",
+        "items": [
+            {
+                "ItemID": "PalSphere_Mega",
+                "Quantity": 5
+            },
+            {
+                "ItemID": "ClothArmor",
+                "Quantity": 1
+            }
+        ],
+        "Monsters": [
+            {
+                "ID": "FoxMage",
+                "Level": 1,
+                "Level_Max": 5,
+                "Num": 1,
+                "Num_Max": 1,
+                "Stats": {
+                    "IsRarePal": true
+                }
+            }
+        ]
+    },
+    "Farmer": {
+        "PermissionLevel": "Member",
+        "Reset": "Daily",
+        "items": [
+            {
+                "ItemID": "Bread",
+                "Quantity": 30
+            },
+            {
+                "ItemID": "Pancake",
+                "Quantity": 10
+            }
+        ]
+    },
+    "Alchemist": {
+        "PermissionLevel": "Vip1",
+        "Reset": "Daily",
+        "items": [
+            {
+                "ItemID": "Horn",
+                "Quantity": 100
+            },
+            {
+                "ItemID": "Bone",
+                "Quantity": 30
+            },
+            {
+                "ItemID": "Red Berries",
+                "Quantity": 50
+            }
+        ]
+    },
+    "Reaper": {
+        "PermissionLevel": "Vip1",
+        "Reset": "Weekly",
+        "items": [
+            {
+                "ItemID": "PalUpgradeStone",
+                "Quantity": 20
+            },
+            {
+                "ItemID": "PalUpgradeStone2",
+                "Quantity": 8
+            },
+            {
+                "ItemID": "PalUpgradeStone3",
+                "Quantity": 4
+            }
+        ]
+    },
+    "Breeder": {
+        "PermissionLevel": "Vip2",
+        "Reset": "Monthly",
+        "items": [
+            {
+                "ItemID": "Cake",
+                "Quantity": 20
+            }
+        ]
+    },
+    "Admin": {
+        "PermissionLevel": "Admin",
+        "Reset": "Always",
+        "items": [
+            {
+                "ItemID": "HandGun_Default_5",
+                "Quantity": 1
+            },
+            {
+                "ItemID": "HandgunBullet",
+                "Quantity": 100
+            }
+        ]
+    }
+}
+  
