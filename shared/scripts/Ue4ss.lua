@@ -4,7 +4,7 @@ local Ue4ss = {}
 --Should preferably generate with a constructor, as it only changes the union(U) of the keys.
 
 ---@param Userdata UObject|TArray
----@param data table<K, V>
+---@param data table
 function Ue4ss.Merge(Userdata, data)
     for key, value in pairs(data) do
         if type(value) == "table" then

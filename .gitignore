@@ -1,1 +1,3 @@
-shared/types/palworld
+shared/types/
+!shared/types/Ue4ss.txt
+shared/Logs.txt

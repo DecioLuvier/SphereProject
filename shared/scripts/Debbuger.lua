@@ -5,7 +5,7 @@ Debbuger.Path = ".\\Mods\\shared\\"
 
 ---@param message string
 function Debbuger.log(message)
-    local file, err = io.open(Debbuger.Path .. "Logs.txt", "a")
+    local file = io.open(Debbuger.Path .. "Logs.txt", "a")
     if not file then
         file = io.open(Debbuger.Path .. "Logs.txt", "w")
     end
@@ -18,7 +18,7 @@ end
 
 --This code is poorly optimized and should be done in future versions, but works well for debugging purposes
 
----@param array table<K, V>|V[]
+---@param array table
 ---@param depth number
 ---@return string
 function Debbuger.arrayToString(array, depth)
