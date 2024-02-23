@@ -1,7 +1,7 @@
 --The inspiration for creating this plugin came from the repository 
 --https://github.com/aytimothy/PalworldEssentials/
 
-local Debbuger = require("scripts/Debbuger")
+local Debugger = require("scripts/Debugger")
 local Player = require("scripts/Player")
 local System = require("scripts/System")
 
@@ -40,7 +40,7 @@ end
 ---@param ChatMessage FPalChatMessage
 local function ListenChatMessage(player, ChatMessage)
     local messageText = ChatMessage.Message:ToString()
-    Debbuger.log(FormatChatMessage(ChatMessage))
+    Debugger.log(FormatChatMessage(ChatMessage))
     
     if string.match(messageText, "^/") then
         local commandString = string.sub(messageText, 2)
