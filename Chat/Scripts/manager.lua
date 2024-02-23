@@ -24,7 +24,32 @@ manager.ignore = {
     showplayers = require("./commands/ignore"),   
     info = require("./commands/ignore"),   
     save = require("./commands/ignore"),   
-    adminpassword = require("./commands/ignore"),   
+    adminpassword = require("./commands/ignore"),  
+    
+    --This here is a support for palguard, for it to work you need to download palguard 
+    --version ue4ss on the official github to support its creator(Not me)
+    --https://github.com/BloodDragon2580/Palguard/
+    --You should use the Palworld Server Linux-Wine-Proton
+    reloadcfg = require("./commands/ignore"),  
+    imcheater = require("./commands/ignore"),  
+    kick = require("./commands/ignore"),  
+    kickid = require("./commands/ignore"),  
+    ban = require("./commands/ignore"),  
+    banid = require("./commands/ignore"),  
+    ipban = require("./commands/ignore"),  
+    ipbanid = require("./commands/ignore"),  
+    ipban_ip = require("./commands/ignore"),  
+    addadminip = require("./commands/ignore"),  
+    setadmin = require("./commands/ignore"),  
+    --give = require("./commands/ignore"),  
+    --give_exp = require("./commands/ignore"),  
+    whitelist_add = require("./commands/ignore"),  
+    whitelist_remove = require("./commands/ignore"),  
+    whitelist_get = require("./commands/ignore"),  
+    --givepal = require("./commands/ignore"),  
+    giveegg = require("./commands/ignore"),  
+    jetragon = require("./commands/ignore"),  
+    catwaifu = require("./commands/ignore"),  
 }
 
 return manager
