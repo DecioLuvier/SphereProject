@@ -26,10 +26,7 @@ manager.ignore = {
     save = require("./commands/ignore"),   
     adminpassword = require("./commands/ignore"),  
     
-    --This here is a support for palguard, for it to work you need to download palguard 
-    --version ue4ss on the official github to support its creator(Not me)
-    --https://github.com/BloodDragon2580/Palguard/
-    --You should use the Palworld Server Linux-Wine-Proton
+    --This here is a support for palguard, more info on README on github
     reloadcfg = require("./commands/ignore"),  
     imcheater = require("./commands/ignore"),  
     kick = require("./commands/ignore"),  
