@@ -41,7 +41,7 @@ end
 
 ---@param PlayerController APalPlayerController
 ---@return string
-function Player.GetSteamName(PlayerController)
+function Player.GetName(PlayerController)
     local PalPlayerState = PlayerController:GetPalPlayerState()
     return PalPlayerState.PlayerNamePrivate:ToString()
 end
@@ -52,12 +52,6 @@ function Player.GetController(Id)
     local players = FindAllOf("PalPlayerController")
     for i = 1, #players do
         local player = players[i] ---@type APalPlayerController
-        local SteamName = Player.GetSteamName(player)
-        if SteamName then
-            if string.lower(tostring(Id)) == string.lower(SteamName) then
-                return player
-            end
-        end
         local playerState = player:GetPalPlayerState()
         if playerState then
             if tonumber(Id) == playerState.PlayerUId.A then

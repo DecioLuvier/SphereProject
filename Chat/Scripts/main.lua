@@ -79,14 +79,14 @@ end)
 RegisterHook("/Script/Pal.PalPlayerCharacter:OnCompleteInitializeParameter", function(self)
     local palPlayerCharacter = self:get() ---@type APalPlayerCharacter
     local palPlayerController =  palPlayerCharacter:GetPalPlayerController()
-    local playerName = Player.GetSteamName(palPlayerController)
+    local playerName = Player.GetName(palPlayerController)
     local playerEnterMessage = string.format("%s joined the game!", playerName)
     System.SendSystemAnnounce(palPlayerController, playerEnterMessage)
 end)
 
 RegisterHook("/Script/Pal.PalPlayerController:OnDestroyPawn", function(self)
     local palPlayerController = self:get() ---@type APalPlayerController
-    local playerName = Player.GetSteamName(palPlayerController)
+    local playerName = Player.GetName(palPlayerController)
     local playerLeaveMessage = string.format("%s disconnected.", playerName)
     System.SendSystemAnnounce(palPlayerController, playerLeaveMessage)
 end)

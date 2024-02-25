@@ -19,7 +19,7 @@ function time.execute(sender, arguments)
             if HourNumber >= 0 and HourNumber < 24 then
                 local TimeManager = Static.GetTimeManager()
                 TimeManager:SetGameTime_FixDay(tonumber(desiredHour))
-                local playerName = Player.GetSteamName(sender)
+                local playerName = Player.GetName(sender)
                 System.SendSystemAnnounce(sender, string.format('%s changed the game time to %s hours!', playerName, desiredHour))
             else
                 System.SendSystemToPlayer(sender, 'Hour need to be in 0-23 interval')  
