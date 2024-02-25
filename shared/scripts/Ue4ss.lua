@@ -18,4 +18,23 @@ function Ue4ss.Merge(Userdata, data)
     end
 end
 
+function Ue4ss.CompareTables(table1, table2)
+    if type(table1) ~= type(table2) then
+        return false
+    end
+    if #table1 ~= #table2 then
+        return false
+    end
+    for key, value in pairs(table1) do
+        if type(value) == "table" then
+            if not compareTables(value, table2[key]) then
+                return false
+            end
+        elseif value ~= table2[key] then
+            return false
+        end
+    end
+    return true
+end
+
 return Ue4ss

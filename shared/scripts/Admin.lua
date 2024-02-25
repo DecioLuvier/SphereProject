@@ -42,12 +42,21 @@ function Admin.GiveTechToPlayer(PlayerController, Quantity)
     PalNetworkPlayerComponent:RequestAddTechnolgyPoint_ToServer(Quantity)
 end
 
+local Debugger = require("scripts/Debugger")
+
 ---@param Character APalCharacter
 ---@param Target APalCharacter
 function Admin.TeleportCharacterToCharacter(Character, Target)
     local PalUtility = Static.GetPalUtility()
     local locationTarget =  FVector.translate(Target.CharacterMovement.LastUpdateLocation)
     PalUtility:TeleportAroundLoccation(Character, locationTarget, FQuat.new(0,0,0,0))
+end
+
+---@param Character APalCharacter
+---@param Target FVector
+function Admin.TeleportCharacterToLocation(Character, Target)
+    local PalUtility = Static.GetPalUtility()
+    PalUtility:TeleportAroundLoccation(Character, Target, FQuat.new(0,0,0,0))
 end
 
 ---@param SpawnedInstance APalCharacter
