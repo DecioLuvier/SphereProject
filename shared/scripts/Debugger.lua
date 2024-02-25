@@ -5,7 +5,7 @@ Debugger.Path = ".\\Mods\\shared\\"
 
 ---@param message string
 function Debugger.log(message)
-    print(message)
+    print(message .."\n")
     local file = io.open(Debugger.Path .. "Logs.txt", "a")
     if not file then
         file = io.open(Debugger.Path .. "Logs.txt", "w")

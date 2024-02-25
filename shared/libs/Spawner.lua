@@ -2,6 +2,7 @@ local Admin = require("scripts/Admin")
 local Monster = require("scripts/Monster")
 local Ue4ss = require("scripts/Ue4ss")
 local Static = require("scripts/Static")
+local Debugger = require("scripts/Debugger")
 
 local FPalSpawnerGroupList = require("constructors/FPalSpawnerGroupList")
 local FPalSpawnerGroupInfo = require("constructors/FPalSpawnerGroupInfo")
@@ -35,7 +36,7 @@ function Spawner.Spawn(MonsterData,PostCallback,CallbackParameters)
     local npcID = Monster.IsMonsterDebugNameValid(MonsterData["ID"])
 
     if palID == "None" and npcID == "None" then
-        print("ID to spawn monster not found")
+        Debugger.log("ID to spawn monster not found")
     else
         local Level = tonumber(MonsterData["Level"]) 
         local Level_Max = tonumber(MonsterData["Level_Max"]) 
@@ -43,7 +44,7 @@ function Spawner.Spawn(MonsterData,PostCallback,CallbackParameters)
         local Num_Max = tonumber(MonsterData["Num_Max"]) 
 
         if not Level and Level_Max and Num and Num_Max then
-            print("Level or Number to spawn monster not found")
+            Debugger.log("Level or Number to spawn monster not found")
         else
             local spawningMonster = FPalSpawnerOneTribeInfo.new(
                 FPalDataTableRowName_PalMonsterData.new(FName(palID)),
