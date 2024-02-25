@@ -1,7 +1,5 @@
 {
     "Noob": {
-        "PermissionLevel": "Member",
-        "Reset": "Never",
         "items": [
             {
                 "ItemID": "Pickaxe_Tier_00",
@@ -26,8 +24,6 @@
         ]
     },
     "Pro": {
-        "PermissionLevel": "Vip1",
-        "Reset": "Never",
         "items": [
             {
                 "ItemID": "PalSphere_Mega",
@@ -52,8 +48,6 @@
         ]
     },
     "Farmer": {
-        "PermissionLevel": "Member",
-        "Reset": "Daily",
         "items": [
             {
                 "ItemID": "Bread",
@@ -66,8 +60,6 @@
         ]
     },
     "Alchemist": {
-        "PermissionLevel": "Vip1",
-        "Reset": "Daily",
         "items": [
             {
                 "ItemID": "Horn",
@@ -84,8 +76,6 @@
         ]
     },
     "Reaper": {
-        "PermissionLevel": "Vip1",
-        "Reset": "Weekly",
         "items": [
             {
                 "ItemID": "PalUpgradeStone",
@@ -102,8 +92,6 @@
         ]
     },
     "Breeder": {
-        "PermissionLevel": "Vip2",
-        "Reset": "Monthly",
         "items": [
             {
                 "ItemID": "Cake",
@@ -112,8 +100,6 @@
         ]
     },
     "Admin": {
-        "PermissionLevel": "Admin",
-        "Reset": "Always",
         "items": [
             {
                 "ItemID": "HandGun_Default_5",
@@ -126,4 +112,3 @@
         ]
     }
 }
-  
