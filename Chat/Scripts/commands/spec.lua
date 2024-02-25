@@ -13,10 +13,10 @@ function spec.execute(sender, arguments)
         local state = arguments[2]
         
         if state == "on" then
-            PalPlayerCharacter:SetSpectatorMode(true)
+            PalPlayerCharacter.bSpectatorMode = true
             PalPlayerCharacter.CharacterMovement.RunSpeed_Default = 10000
         elseif state == "off" then
-            PalPlayerCharacter:SetSpectatorMode(false)
+            PalPlayerCharacter.bSpectatorMode = false
             PalPlayerCharacter.CharacterMovement.RunSpeed_Default = 350
         else
             System.SendSystemToPlayer(sender, 'State must be an boolean.')
