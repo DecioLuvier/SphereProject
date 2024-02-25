@@ -21,13 +21,6 @@ To enhance your Lua development experience and align it with the standards of th
    3. Now you should find countless files in the `shared/types` folder.
    4. Get the Ue4ss [types](https://github.com/UE4SS-RE/RE-UE4SS/blob/b29b40f79ccc08da1e264a85907446da51934d97/assets/Mods/shared/Types.lua#L4) and put in the same folder
 
-# PalGuard Compatibility
-   1. Open the [palguard](https://github.com/BloodDragon2580/Palguard/) github
-   2. You should download the Linux-Wine-Proton version(Even if you are on Windows)
-   3. Install normally by following the tutorial on the repository
-   4. Support his creator on their [discord](https://discord.gg/palguard)!
-   5. And now yes, you can just drop all Sphere files into the mods folder
-
 # Special Thanks
 I would like to extend special thanks to the members of the [UE4SS](https://discord.com/invite/7qhRGHF9Tt) Discord server who generously shared their knowledge and helped answer my questions, making this project possible.
 

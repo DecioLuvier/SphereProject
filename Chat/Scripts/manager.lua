@@ -26,7 +26,7 @@ manager.ignore = {
     save = require("./commands/ignore"),   
     adminpassword = require("./commands/ignore"),  
     
-    --This here is a support for palguard, more info on README on github
+    --This here is a support for palguard
     reloadcfg = require("./commands/ignore"),  
     imcheater = require("./commands/ignore"),  
     kick = require("./commands/ignore"),  
