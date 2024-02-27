@@ -28,6 +28,41 @@ local json = { _version = "0.1.2" }
 -- Encode
 -------------------------------------------------------------------------------
 
+function json.beautify(json)
+  local formatted_json = ""
+  local indent_level = 0
+  local in_string = false
+  local char, prev_char
+
+  for i = 1, #json do
+      char = json:sub(i, i)
+
+      if char == '"' and prev_char ~= '\\' then
+          in_string = not in_string
+      end
+
+      if in_string then
+          formatted_json = formatted_json .. char
+      else
+          if char == '{' or char == '[' then
+              indent_level = indent_level + 2
+              formatted_json = formatted_json .. char .. "\n" .. string.rep("  ", indent_level)
+          elseif char == '}' or char == ']' then
+              indent_level = indent_level - 2
+              formatted_json = formatted_json .. "\n" .. string.rep("  ", indent_level) .. char
+          elseif char == ',' then
+              formatted_json = formatted_json .. char .. "\n" .. string.rep("  ", indent_level)
+          elseif char == ':' then
+              formatted_json = formatted_json .. char .. " "
+          else
+              formatted_json = formatted_json .. char
+          end
+      end
+      prev_char = char
+  end
+  return formatted_json
+end
+
 local encode
 
 local escape_char_map = {

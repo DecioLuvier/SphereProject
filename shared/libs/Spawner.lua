@@ -1,3 +1,27 @@
+--
+-- spawner.lua
+--
+-- Copyright (c) 2024 DecioLuvier
+--
+-- Permission is hereby granted, free of charge, to any person obtaining a copy of
+-- this software and associated documentation files (the "Software"), to deal in
+-- the Software without restriction, including without limitation the rights to
+-- use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+-- of the Software, and to permit persons to whom the Software is furnished to do
+-- so, subject to the following conditions:
+--
+-- The above copyright notice and this permission notice shall be included in all
+-- copies or substantial portions of the Software.
+--
+-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-- SOFTWARE.
+--
+
 local Admin = require("scripts/Admin")
 local Monster = require("scripts/Monster")
 local Ue4ss = require("scripts/Ue4ss")
@@ -10,7 +34,7 @@ local FPalSpawnerOneTribeInfo = require("constructors/FPalSpawnerOneTribeInfo")
 local FPalDataTableRowName_PalHumanData = require("constructors/FPalDataTableRowName_PalHumanData")
 local FPalDataTableRowName_PalMonsterData = require("constructors/FPalDataTableRowName_PalMonsterData")
 
-local SkillsData = require("enums/Skills")
+local PassiveSkills = require("enums/PassiveSkills")
 
 local Spawner = {}
 
@@ -133,7 +157,7 @@ ExecuteWithDelay(5000, function()
                 if PassiveSkillList then
                     SaveParameter.PassiveSkillList:Empty()
                     for l = 1, #PassiveSkillList do
-                        IndividualParameter.AddPassiveSkill(FName("None"),FName(SkillsData[PassiveSkillList[l]]), FName("None"))
+                        IndividualParameter.AddPassiveSkill(FName("None"),FName(PassiveSkills[PassiveSkillList[l]]), FName("None"))
                     end 
                 end
     

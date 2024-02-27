@@ -1,0 +1,35 @@
+{
+    "Godnubis": {
+        "DebugID": "Anubis",
+        "MasteredSkills": [
+            "POWER_BOMB",
+            "SAND_TORNADO"
+        ],
+        "Quantity": 1,
+        "EquipedSkills": [
+            "IGNIS_BLAST",
+            "SOLAR_BLAST",
+            "SPARK_BLAST"
+        ],
+        "Stats": {
+            "Rank_Defence": 5,
+            "NickName": "The Pharaoh",
+            "Talent_Defense": 100,
+            "Rank": 5,
+            "Talent_HP": 100,
+            "Talent_Shot": 100,
+            "Talent_Melee": 100,
+            "Rank_HP": 5,
+            "Rank_CraftSpeed": 5,
+            "Rank_Attack": 5,
+            "IsRarePal": true
+        },
+        "Level": 35,
+        "PassiveSkillList": [
+            "Lucky",
+            "Legend",
+            "Artisan",
+            "Serious"
+        ]
+    }
+}
