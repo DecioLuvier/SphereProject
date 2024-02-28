@@ -3,7 +3,7 @@ local Monster = require("scripts/Monster")
 local Pals = require("enums/Pals")
 local PassiveSkills = require("enums/PassiveSkills")
 
-local customPals = {}
+local CustomPals = {}
 
 local function validationPalSkill()
     return function(value, key, data)
@@ -13,7 +13,7 @@ local function validationPalSkill()
         if not PalName then
           return false
         elseif not Monster.IsSkillDebugNameValid(PalSkill) then
-            return false, "Is not a valid skill"
+            return false, "Is not a valid"
         elseif not Monster.CanLearnWaza(PalName, PalSkill) then
             return false, "pal cannot learn this ability"
         else
@@ -22,7 +22,7 @@ local function validationPalSkill()
     end
 end
 
-customPals.validate = validation.is_array(
+CustomPals.validate = validation.is_array(
     validation.is_table {
         DebugID = validation.required(validation.is_string(validation.is_KeyOfList(Pals))),
         Level = validation.required(validation.is_integer(validation.in_range(1,50))),
@@ -46,7 +46,7 @@ customPals.validate = validation.is_array(
     }
 )
 
-customPals.default = {
+CustomPals.default = {
     Godnubis = {
         DebugID = "Anubis",
         Level = 35,
@@ -79,7 +79,7 @@ customPals.default = {
             "POWER_BOMB",
             "SAND_TORNADO"
         }
-    }
+    },
 }
 
-return customPals
+return CustomPals

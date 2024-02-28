@@ -1,21 +1,59 @@
 local Debugger = {}
 
-Debugger.prefix = "Logger | " 
+Debugger.prefix = "[Sphere]" 
 Debugger.Path = ".\\Mods\\shared\\"
 
 ---@param message string
 function Debugger.log(message)
-    print(message .."\n")
-    local file = io.open(Debugger.Path .. "Logs.txt", "a")
-    if not file then
-        file = io.open(Debugger.Path .. "Logs.txt", "w")
-    end
-    if file then
+    if type(message) == "table" then
+        logArray(message)
+    else
         local time = os.date("[%H:%M:%S]")
-        file:write(time .. " " .. message .."\n")
-        file:close()
+        os.execute(string.format("echo %s %s %s", time, Debugger.prefix, message))
+        local file = io.open(Debugger.Path .. "Logs.txt", "a")
+        
+        if not file then
+            file = io.open(Debugger.Path .. "Logs.txt", "w")
+        end
+        if file then
+            file:write(time .. " " .. message .."\n")
+            file:close()
+        end
     end
 end
+
+---@param array table
+---@param depth? number
+local function logArray(array, depth)
+    depth = depth or 0
+    local logString = "\n" 
+    for key, value in pairs(array) do
+        local depthCharacters = string.rep("-", depth)
+        if type(value) == "table" then
+            os.execute(string.format("echo %s", (depthCharacters .. "- Key: " .. key)))
+            logArray(value, depth + 2)
+        else
+            os.execute(string.format("echo %s %s", (depthCharacters .. "  " .. key), ( tostring(value) .. "\n")))
+        end
+    end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 --This code is poorly optimized and should be done in future versions, but works well for debugging purposes
 
@@ -29,7 +67,7 @@ function Debugger.arrayToString(array, depth)
     
     for key, value in pairs(array) do
         local depthCharacters = string.rep("-----", depth)
-        logString = logString .. depthCharacters .. "-> Key: " .. getMessage(key)
+        logString = logString .. depthCharacters .. "- Key: " .. getMessage(key)
         
         if type(value) == "table" then
             logString = logString .. Debugger.arrayToString(value, depth + 1)

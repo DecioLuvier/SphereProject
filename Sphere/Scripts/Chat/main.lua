@@ -50,7 +50,6 @@ local function ListenChatMessage(player, ChatMessage)
             local selectedCommand = commandArgs[1]
 
             if not ignore[selectedCommand] then
-
                 ChatMessage.SenderPlayerUId["A"] = 2345678   --Remove default system message making "miss" target, 
                 ChatMessage.ReceiverPlayerUId["A"] = 2345678 --This should be revised in future versions
 

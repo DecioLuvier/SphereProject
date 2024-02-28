@@ -1,5 +1,27 @@
---Starting point for creating this
---https://github.com/erento/lua-schema-validation
+--
+-- validation.lua
+--
+-- Copyright (c) 2016 erento
+-- Copyright (c) 2024 DecioLuvier
+--
+-- Permission is hereby granted, free of charge, to any person obtaining a copy of
+-- this software and associated documentation files (the "Software"), to deal in
+-- the Software without restriction, including without limitation the rights to
+-- use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+-- of the Software, and to permit persons to whom the Software is furnished to do
+-- so, subject to the following conditions:
+--
+-- The above copyright notice and this permission notice shall be included in all
+-- copies or substantial portions of the Software.
+--
+-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-- SOFTWARE.
+--
 
 local validation = {}
 
@@ -65,7 +87,6 @@ function validation.is_array(validator)
     local result, err = nil
     local err_array = {}
 
-
     if type(value) == 'table' then
       for index in pairs(value) do
 
@@ -76,7 +97,7 @@ function validation.is_array(validator)
         end
       end
     else
-      insert(err_array, 'is not an array')
+      table.insert(err_array, 'is not an array')
     end
 
     if next(err_array) == nil then
@@ -97,7 +118,7 @@ function validation.is_table(schema)
 
       if not err then err = {} end
       result = false
-      insert(err, "is not a table.")
+      table.insert(err, "is not a table.")
     else
       result, err = validation.is_table_implementation(value, schema)
     end
