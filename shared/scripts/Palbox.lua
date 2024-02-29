@@ -1,4 +1,4 @@
-local Ue4ss = require("scripts/Ue4ss")
+local Utilities = require("scripts/Utilities")
 
 local Fguid = require("constructors/Fguid")
 local FVector = require("constructors/FVector")
@@ -15,7 +15,7 @@ function Palbox.GetPlayerPalBoxes(PlayerController)
         local palBox = allPalBoxes[i] ---@type ABP_BuildObject_PalBoxV2_C
         local palBoxGuildUid = Fguid.translate(palBox.MapObjectModel.GroupIdBelongTo)
 
-        if Ue4ss.CompareTables(palBoxGuildUid, playerGuildUid) then
+        if Utilities.CompareTables(palBoxGuildUid, playerGuildUid) then
             table.insert(playerPalBoxes, palBox)
         end
     end

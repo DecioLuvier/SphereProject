@@ -1,22 +1,5 @@
 local Debugger = {}
 
-Debugger.prefix = "Logger | " 
-Debugger.Path = ".\\Mods\\shared\\"
-
----@param message string
-function Debugger.log(message)
-    print(message .."\n")
-    local file = io.open(Debugger.Path .. "Logs.txt", "a")
-    if not file then
-        file = io.open(Debugger.Path .. "Logs.txt", "w")
-    end
-    if file then
-        local time = os.date("[%H:%M:%S]")
-        file:write(time .. " " .. message .."\n")
-        file:close()
-    end
-end
-
 --This code is poorly optimized and should be done in future versions, but works well for debugging purposes
 
 ---@param array table
@@ -29,7 +12,7 @@ function Debugger.arrayToString(array, depth)
     
     for key, value in pairs(array) do
         local depthCharacters = string.rep("-----", depth)
-        logString = logString .. depthCharacters .. "-> Key: " .. getMessage(key)
+        logString = logString .. depthCharacters .. "- Key: " .. getMessage(key)
         
         if type(value) == "table" then
             logString = logString .. Debugger.arrayToString(value, depth + 1)

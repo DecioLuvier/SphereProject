@@ -1,6 +1,6 @@
-local PalWazaIDs = {}
+local PalsLevelSkills = {}
 
-PalWazaIDs.SheepBall = {
+PalsLevelSkills.SheepBall = {
    ROLY_POLY = 18,
    AIR_CANNON = 22,
    POWER_SHOT = 11,
@@ -10,7 +10,7 @@ PalWazaIDs.SheepBall = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.PinkCat = {
+PalsLevelSkills.PinkCat = {
    PUNCH_FLURRY = 16,
    AIR_CANNON = 22,
    SAND_BLAST = 87,
@@ -20,7 +20,7 @@ PalWazaIDs.PinkCat = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.ChickenPal = {
+PalsLevelSkills.ChickenPal = {
    CHICKEN_RUSH = 19,
    AIR_CANNON = 22,
    POWER_SHOT = 11,
@@ -30,7 +30,7 @@ PalWazaIDs.ChickenPal = {
    FLARE_STORM = 42,
 }
 
-PalWazaIDs.Carbunclo = {
+PalsLevelSkills.Carbunclo = {
    WIND_CUTTER = 57,
    AIR_CANNON = 22,
    POWER_SHOT = 11,
@@ -39,7 +39,7 @@ PalWazaIDs.Carbunclo = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.Kitsunebi = {
+PalsLevelSkills.Kitsunebi = {
    IGNIS_BLAST = 36,
    SAND_BLAST = 87,
    SPIRIT_FIRE = 40,
@@ -49,7 +49,7 @@ PalWazaIDs.Kitsunebi = {
    FIRE_BALL = 38,
 }
 
-PalWazaIDs.BluePlatypus = {
+PalsLevelSkills.BluePlatypus = {
    AQUA_GUN = 48,
    POWER_SHOT = 11,
    HYDRO_JET = 53,
@@ -59,7 +59,7 @@ PalWazaIDs.BluePlatypus = {
    HYDRO_LASER = 50,
 }
 
-PalWazaIDs.ElecCat = {
+PalsLevelSkills.ElecCat = {
    SPARK_BLAST = 73,
    SAND_BLAST = 87,
    SHOCKWAVE = 70,
@@ -68,7 +68,7 @@ PalWazaIDs.ElecCat = {
    LIGHTNING_BOLT = 71,
 }
 
-PalWazaIDs.Monkey = {
+PalsLevelSkills.Monkey = {
    WIND_CUTTER = 57,
    SAND_BLAST = 87,
    SEED_MACHINE_GUN = 60,
@@ -78,7 +78,7 @@ PalWazaIDs.Monkey = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.FlameBambi = {
+PalsLevelSkills.FlameBambi = {
    IGNIS_BLAST = 36,
    POWER_SHOT = 11,
    SPIRIT_FIRE = 40,
@@ -88,7 +88,7 @@ PalWazaIDs.FlameBambi = {
    FIRE_BALL = 38,
 }
 
-PalWazaIDs.Penguin = {
+PalsLevelSkills.Penguin = {
    ICE_MISSILE = 78,
    HYDRO_JET = 53,
    AQUA_GUN = 48,
@@ -98,7 +98,7 @@ PalWazaIDs.Penguin = {
    HYDRO_LASER = 50,
 }
 
-PalWazaIDs.CaptainPenguin = {
+PalsLevelSkills.CaptainPenguin = {
    AQUA_GUN = 48,
    ICEBERG = 79,
    EMPEROR_SLIDE = 132,
@@ -108,7 +108,7 @@ PalWazaIDs.CaptainPenguin = {
    HYDRO_LASER = 50,
 }
 
-PalWazaIDs.Hedgehog = {
+PalsLevelSkills.Hedgehog = {
    SHOCKWAVE = 70,
    POWER_SHOT = 11,
    ELECTRIC_BALL = 66,
@@ -117,7 +117,7 @@ PalWazaIDs.Hedgehog = {
    LIGHTNING_BOLT = 71,
 }
 
-PalWazaIDs.PlantSlime = {
+PalsLevelSkills.PlantSlime = {
    SAND_BLAST = 87,
    WIND_CUTTER = 57,
    STONE_BLAST = 88,
@@ -127,7 +127,7 @@ PalWazaIDs.PlantSlime = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.CuteFox = {
+PalsLevelSkills.CuteFox = {
    AIR_CANNON = 22,
    SAND_BLAST = 87,
    POWER_SHOT = 11,
@@ -137,7 +137,7 @@ PalWazaIDs.CuteFox = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.WizardOwl = {
+PalsLevelSkills.WizardOwl = {
    AIR_CANNON = 22,
    DARK_BALL = 110,
    SHADOW_BURST = 91,
@@ -147,7 +147,7 @@ PalWazaIDs.WizardOwl = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.Ganesha = {
+PalsLevelSkills.Ganesha = {
    AQUA_GUN = 48,
    HYDRO_JET = 53,
    SAND_BLAST = 87,
@@ -157,7 +157,7 @@ PalWazaIDs.Ganesha = {
    HYDRO_LASER = 50,
 }
 
-PalWazaIDs.NegativeKoala = {
+PalsLevelSkills.NegativeKoala = {
    POISON_BLAST = 94,
    SAND_BLAST = 87,
    DARK_BALL = 110,
@@ -167,7 +167,7 @@ PalWazaIDs.NegativeKoala = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.WoolFox = {
+PalsLevelSkills.WoolFox = {
    AIR_CANNON = 22,
    SAND_BLAST = 87,
    SPARK_BLAST = 73,
@@ -177,7 +177,7 @@ PalWazaIDs.WoolFox = {
    LIGHTNING_BOLT = 71,
 }
 
-PalWazaIDs.DreamDemon = {
+PalsLevelSkills.DreamDemon = {
    DARK_BALL = 110,
    POISON_BLAST = 94,
    SHADOW_BURST = 91,
@@ -187,7 +187,7 @@ PalWazaIDs.DreamDemon = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.Boar = {
+PalsLevelSkills.Boar = {
    RECKLESS_CHARGE = 15,
    SAND_BLAST = 87,
    POWER_SHOT = 11,
@@ -197,7 +197,7 @@ PalWazaIDs.Boar = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.NightFox = {
+PalsLevelSkills.NightFox = {
    AIR_CANNON = 22,
    DARK_BALL = 110,
    SHADOW_BURST = 91,
@@ -207,7 +207,7 @@ PalWazaIDs.NightFox = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.CuteMole = {
+PalsLevelSkills.CuteMole = {
    SAND_BLAST = 87,
    POWER_SHOT = 11,
    STONE_BLAST = 88,
@@ -217,7 +217,7 @@ PalWazaIDs.CuteMole = {
    ROCK_LANCE = 86,
 }
 
-PalWazaIDs.NegativeOctopus = {
+PalsLevelSkills.NegativeOctopus = {
    HYDRO_JET = 53,
    POISON_BLAST = 94,
    DARK_BALL = 110,
@@ -227,7 +227,7 @@ PalWazaIDs.NegativeOctopus = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.Bastet = {
+PalsLevelSkills.Bastet = {
    SAND_BLAST = 87,
    DARK_BALL = 110,
    SHADOW_BURST = 91,
@@ -237,7 +237,7 @@ PalWazaIDs.Bastet = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.FlyingManta = {
+PalsLevelSkills.FlyingManta = {
    HYDRO_JET = 53,
    AQUA_GUN = 48,
    POWER_SHOT = 11,
@@ -247,7 +247,7 @@ PalWazaIDs.FlyingManta = {
    HYDRO_LASER = 50,
 }
 
-PalWazaIDs.Garm = {
+PalsLevelSkills.Garm = {
    FIERCE_FANG = 13,
    SAND_BLAST = 87,
    AIR_CANNON = 22,
@@ -257,7 +257,7 @@ PalWazaIDs.Garm = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.ColorfulBird = {
+PalsLevelSkills.ColorfulBird = {
    IMPLODE = 33,
    AIR_CANNON = 22,
    POWER_SHOT = 11,
@@ -267,7 +267,7 @@ PalWazaIDs.ColorfulBird = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.FlowerRabbit = {
+PalsLevelSkills.FlowerRabbit = {
    WIND_CUTTER = 57,
    AIR_CANNON = 22,
    HYDRO_JET = 53,
@@ -277,7 +277,7 @@ PalWazaIDs.FlowerRabbit = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.CowPal = {
+PalsLevelSkills.CowPal = {
    POWER_SHOT = 11,
    SAND_BLAST = 87,
    AIR_CANNON = 22,
@@ -287,7 +287,7 @@ PalWazaIDs.CowPal = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.LittleBriarRose = {
+PalsLevelSkills.LittleBriarRose = {
    WIND_CUTTER = 57,
    SEED_MACHINE_GUN = 60,
    ICE_MISSILE = 78,
@@ -296,7 +296,7 @@ PalWazaIDs.LittleBriarRose = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.SharkKid = {
+PalsLevelSkills.SharkKid = {
    HYDRO_JET = 53,
    POWER_SHOT = 11,
    AQUA_GUN = 48,
@@ -306,7 +306,7 @@ PalWazaIDs.SharkKid = {
    HYDRO_LASER = 50,
 }
 
-PalWazaIDs.WindChimes = {
+PalsLevelSkills.WindChimes = {
    SAND_BLAST = 87,
    AIR_CANNON = 22,
    WIND_CUTTER = 57,
@@ -316,7 +316,7 @@ PalWazaIDs.WindChimes = {
    ROCK_LANCE = 86,
 }
 
-PalWazaIDs.GrassPanda = {
+PalsLevelSkills.GrassPanda = {
    POWER_SHOT = 11,
    SEED_MACHINE_GUN = 60,
    STONE_CANNON = 85,
@@ -325,7 +325,7 @@ PalWazaIDs.GrassPanda = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.SweetsSheep = {
+PalsLevelSkills.SweetsSheep = {
    AIR_CANNON = 22,
    SAND_BLAST = 87,
    POWER_SHOT = 11,
@@ -335,7 +335,7 @@ PalWazaIDs.SweetsSheep = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.BerryGoat = {
+PalsLevelSkills.BerryGoat = {
    WIND_CUTTER = 57,
    AIR_CANNON = 22,
    SAND_BLAST = 87,
@@ -344,7 +344,7 @@ PalWazaIDs.BerryGoat = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.Alpaca = {
+PalsLevelSkills.Alpaca = {
    AIR_CANNON = 22,
    FLUFFY_TACKLE = 25,
    SAND_BLAST = 87,
@@ -354,7 +354,7 @@ PalWazaIDs.Alpaca = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.Deer = {
+PalsLevelSkills.Deer = {
    POWER_SHOT = 11,
    ANTLER_UPPERCUT = 9,
    STONE_BLAST = 88,
@@ -364,7 +364,7 @@ PalWazaIDs.Deer = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.HawkBird = {
+PalsLevelSkills.HawkBird = {
    AIR_CANNON = 22,
    TORNADO_ATTACK = 31,
    WIND_CUTTER = 57,
@@ -374,7 +374,7 @@ PalWazaIDs.HawkBird = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.PinkRabbit = {
+PalsLevelSkills.PinkRabbit = {
    AIR_CANNON = 22,
    POWER_SHOT = 11,
    ICE_MISSILE = 78,
@@ -384,7 +384,7 @@ PalWazaIDs.PinkRabbit = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.Baphomet = {
+PalsLevelSkills.Baphomet = {
    IGNIS_BLAST = 36,
    SPIRIT_FIRE = 40,
    FLARE_ARROW = 39,
@@ -394,7 +394,7 @@ PalWazaIDs.Baphomet = {
    IGNIS_RAGE = 43,
 }
 
-PalWazaIDs.CuteButterfly = {
+PalsLevelSkills.CuteButterfly = {
    AIR_CANNON = 22,
    WIND_CUTTER = 57,
    POISON_FOG = 112,
@@ -404,7 +404,7 @@ PalWazaIDs.CuteButterfly = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.FlameBuffalo = {
+PalsLevelSkills.FlameBuffalo = {
    IGNIS_BLAST = 36,
    BLAZING_HORN = 47,
    SPIRIT_FIRE = 40,
@@ -414,10 +414,10 @@ PalWazaIDs.FlameBuffalo = {
    FIRE_BALL = 38,
 }
 
-PalWazaIDs.LazyCatfish = {
+PalsLevelSkills.LazyCatfish = {
 }
 
-PalWazaIDs.DarkCrow = {
+PalsLevelSkills.DarkCrow = {
    AIR_CANNON = 22,
    DARK_BALL = 110,
    PHANTOM_PECK = 96,
@@ -427,7 +427,7 @@ PalWazaIDs.DarkCrow = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.LizardMan = {
+PalsLevelSkills.LizardMan = {
    POISON_BLAST = 94,
    DARK_BALL = 110,
    SHADOW_BURST = 91,
@@ -437,7 +437,7 @@ PalWazaIDs.LizardMan = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.Werewolf = {
+PalsLevelSkills.Werewolf = {
    DARK_BALL = 110,
    JUMPING_CLAW = 27,
    SHADOW_BURST = 91,
@@ -447,7 +447,7 @@ PalWazaIDs.Werewolf = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.Eagle = {
+PalsLevelSkills.Eagle = {
    GALE_CLAW = 32,
    AIR_CANNON = 22,
    SAND_BLAST = 87,
@@ -457,7 +457,7 @@ PalWazaIDs.Eagle = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.RobinHood = {
+PalsLevelSkills.RobinHood = {
    WIND_CUTTER = 57,
    POWER_SHOT = 11,
    FOCUS_SHOT = 24,
@@ -466,7 +466,7 @@ PalWazaIDs.RobinHood = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.Gorilla = {
+PalsLevelSkills.Gorilla = {
    SAND_BLAST = 87,
    POWER_SHOT = 11,
    GROUND_POUND = 20,
@@ -476,7 +476,7 @@ PalWazaIDs.Gorilla = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.SoldierBee = {
+PalsLevelSkills.SoldierBee = {
    AIR_CANNON = 22,
    WIND_CUTTER = 57,
    BEE_QUIET = 34,
@@ -486,7 +486,7 @@ PalWazaIDs.SoldierBee = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.QueenBee = {
+PalsLevelSkills.QueenBee = {
    AIR_CANNON = 22,
    WIND_CUTTER = 57,
    POISON_BLAST = 94,
@@ -495,7 +495,7 @@ PalWazaIDs.QueenBee = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.NaughtyCat = {
+PalsLevelSkills.NaughtyCat = {
    SAND_BLAST = 87,
    POWER_SHOT = 11,
    STONE_BLAST = 88,
@@ -504,7 +504,7 @@ PalWazaIDs.NaughtyCat = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.MopBaby = {
+PalsLevelSkills.MopBaby = {
    AIR_CANNON = 22,
    ICE_MISSILE = 78,
    ICICLE_CUTTER = 83,
@@ -514,7 +514,7 @@ PalWazaIDs.MopBaby = {
    BLIZZARD_SPIKE = 81,
 }
 
-PalWazaIDs.MopKing = {
+PalsLevelSkills.MopKing = {
    POWER_SHOT = 11,
    ICE_MISSILE = 78,
    ICICLE_CUTTER = 83,
@@ -524,7 +524,7 @@ PalWazaIDs.MopKing = {
    BLIZZARD_SPIKE = 81,
 }
 
-PalWazaIDs.WeaselDragon = {
+PalsLevelSkills.WeaselDragon = {
    ICE_MISSILE = 78,
    DRAGON_CANNON = 100,
    DRAGON_BURST = 99,
@@ -534,7 +534,7 @@ PalWazaIDs.WeaselDragon = {
    DRAGON_METEOR = 97,
 }
 
-PalWazaIDs.Kirin = {
+PalsLevelSkills.Kirin = {
    SPARK_BLAST = 73,
    SHOCKWAVE = 70,
    LIGHTNING_STREAK = 67,
@@ -542,7 +542,7 @@ PalWazaIDs.Kirin = {
    LIGHTNING_BOLT = 71,
 }
 
-PalWazaIDs.IceFox = {
+PalsLevelSkills.IceFox = {
    AIR_CANNON = 22,
    ICE_MISSILE = 78,
    ICICLE_CUTTER = 83,
@@ -552,7 +552,7 @@ PalWazaIDs.IceFox = {
    BLIZZARD_SPIKE = 81,
 }
 
-PalWazaIDs.FireKirin = {
+PalsLevelSkills.FireKirin = {
    SAND_BLAST = 87,
    IGNIS_BLAST = 36,
    SPIRIT_FIRE = 40,
@@ -562,7 +562,7 @@ PalWazaIDs.FireKirin = {
    FIRE_BALL = 38,
 }
 
-PalWazaIDs.IceDeer = {
+PalsLevelSkills.IceDeer = {
    AIR_CANNON = 22,
    ICE_MISSILE = 78,
    ICICLE_CUTTER = 83,
@@ -572,7 +572,7 @@ PalWazaIDs.IceDeer = {
    BLIZZARD_SPIKE = 81,
 }
 
-PalWazaIDs.ThunderDog = {
+PalsLevelSkills.ThunderDog = {
    SAND_BLAST = 87,
    SHOCKWAVE = 70,
    SPARK_BLAST = 73,
@@ -582,7 +582,7 @@ PalWazaIDs.ThunderDog = {
    LIGHTNING_BOLT = 71,
 }
 
-PalWazaIDs.AmaterasuWolf = {
+PalsLevelSkills.AmaterasuWolf = {
    IGNIS_BLAST = 36,
    SPIRIT_FIRE = 40,
    SPIRIT_FLAME = 95,
@@ -592,7 +592,7 @@ PalWazaIDs.AmaterasuWolf = {
    FIRE_BALL = 38,
 }
 
-PalWazaIDs.RaijinDaughter = {
+PalsLevelSkills.RaijinDaughter = {
    AIR_CANNON = 22,
    SHOCKWAVE = 70,
    ACID_RAIN = 55,
@@ -601,7 +601,7 @@ PalWazaIDs.RaijinDaughter = {
    LIGHTNING_BOLT = 71,
 }
 
-PalWazaIDs.Mutant = {
+PalsLevelSkills.Mutant = {
    AIR_CANNON = 22,
    POWER_SHOT = 11,
    ICICLE_CUTTER = 83,
@@ -611,7 +611,7 @@ PalWazaIDs.Mutant = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.FlowerDinosaur = {
+PalsLevelSkills.FlowerDinosaur = {
    WIND_CUTTER = 57,
    BOTANICAL_SMASH = 17,
    DRAGON_BURST = 99,
@@ -620,7 +620,7 @@ PalWazaIDs.FlowerDinosaur = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.Serpent = {
+PalsLevelSkills.Serpent = {
    HYDRO_JET = 53,
    DRAGON_CANNON = 100,
    AQUA_GUN = 48,
@@ -630,7 +630,7 @@ PalWazaIDs.Serpent = {
    HYDRO_LASER = 50,
 }
 
-PalWazaIDs.GhostBeast = {
+PalsLevelSkills.GhostBeast = {
    IGNIS_BLAST = 36,
    DARK_BALL = 110,
    FLARE_ARROW = 39,
@@ -640,7 +640,7 @@ PalWazaIDs.GhostBeast = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.DrillGame = {
+PalsLevelSkills.DrillGame = {
    AQUA_GUN = 48,
    STONE_BLAST = 88,
    SHELL_SPIN = 89,
@@ -650,7 +650,7 @@ PalWazaIDs.DrillGame = {
    ROCK_LANCE = 86,
 }
 
-PalWazaIDs.CatBat = {
+PalsLevelSkills.CatBat = {
    AIR_CANNON = 22,
    POISON_BLAST = 94,
    DARK_BALL = 110,
@@ -660,7 +660,7 @@ PalWazaIDs.CatBat = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.PinkLizard = {
+PalsLevelSkills.PinkLizard = {
    POWER_SHOT = 11,
    POISON_BLAST = 94,
    SHADOW_BURST = 91,
@@ -670,7 +670,7 @@ PalWazaIDs.PinkLizard = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.LavaGirl = {
+PalsLevelSkills.LavaGirl = {
    IGNIS_BLAST = 36,
    SPIRIT_FIRE = 40,
    FLARE_ARROW = 39,
@@ -680,7 +680,7 @@ PalWazaIDs.LavaGirl = {
    FIRE_BALL = 38,
 }
 
-PalWazaIDs.BirdDragon = {
+PalsLevelSkills.BirdDragon = {
    AIR_CANNON = 22,
    IGNIS_BLAST = 36,
    SPIRIT_FIRE = 40,
@@ -690,7 +690,7 @@ PalWazaIDs.BirdDragon = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.Ronin = {
+PalsLevelSkills.Ronin = {
    IGNIS_BLAST = 36,
    WIND_CUTTER = 57,
    ICICLE_CUTTER = 83,
@@ -700,7 +700,7 @@ PalWazaIDs.Ronin = {
    IGNIS_RAGE = 43,
 }
 
-PalWazaIDs.ThunderBird = {
+PalsLevelSkills.ThunderBird = {
    AIR_CANNON = 22,
    SPARK_BLAST = 73,
    SHOCKWAVE = 70,
@@ -709,7 +709,7 @@ PalWazaIDs.ThunderBird = {
    LIGHTNING_BOLT = 71,
 }
 
-PalWazaIDs.RedArmorBird = {
+PalsLevelSkills.RedArmorBird = {
    AIR_CANNON = 22,
    SPIRIT_FIRE = 40,
    FLARE_ARROW = 39,
@@ -719,7 +719,7 @@ PalWazaIDs.RedArmorBird = {
    FIRE_BALL = 38,
 }
 
-PalWazaIDs.CatMage = {
+PalsLevelSkills.CatMage = {
    IGNIS_BLAST = 36,
    DARK_BALL = 110,
    FLARE_ARROW = 39,
@@ -729,7 +729,7 @@ PalWazaIDs.CatMage = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.FoxMage = {
+PalsLevelSkills.FoxMage = {
    IGNIS_BLAST = 36,
    SPIRIT_FIRE = 40,
    FLARE_ARROW = 39,
@@ -739,7 +739,7 @@ PalWazaIDs.FoxMage = {
    DRAGON_METEOR = 97,
 }
 
-PalWazaIDs.GrassRabbitMan = {
+PalsLevelSkills.GrassRabbitMan = {
    WIND_CUTTER = 57,
    STONE_CANNON = 85,
    SEED_MACHINE_GUN = 60,
@@ -748,7 +748,7 @@ PalWazaIDs.GrassRabbitMan = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.VioletFairy = {
+PalsLevelSkills.VioletFairy = {
    POISON_FOG = 112,
    WIND_CUTTER = 57,
    POISON_BLAST = 94,
@@ -758,7 +758,7 @@ PalWazaIDs.VioletFairy = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.WhiteMoth = {
+PalsLevelSkills.WhiteMoth = {
    ICE_MISSILE = 78,
    ICICLE_CUTTER = 83,
    ICEBERG = 79,
@@ -768,7 +768,7 @@ PalWazaIDs.WhiteMoth = {
    BLIZZARD_SPIKE = 81,
 }
 
-PalWazaIDs.FairyDragon = {
+PalsLevelSkills.FairyDragon = {
    DRAGON_CANNON = 100,
    DRAGON_BURST = 99,
    FLARE_ARROW = 39,
@@ -778,7 +778,7 @@ PalWazaIDs.FairyDragon = {
    DRAGON_METEOR = 97,
 }
 
-PalWazaIDs.Kelpie = {
+PalsLevelSkills.Kelpie = {
    HYDRO_JET = 53,
    DRAGON_CANNON = 100,
    AQUA_GUN = 48,
@@ -788,7 +788,7 @@ PalWazaIDs.Kelpie = {
    HYDRO_LASER = 50,
 }
 
-PalWazaIDs.BlueDragon = {
+PalsLevelSkills.BlueDragon = {
    AQUA_GUN = 48,
    DRAGON_CANNON = 100,
    BUBBLE_BLAST = 54,
@@ -798,7 +798,7 @@ PalWazaIDs.BlueDragon = {
    DRAGON_METEOR = 97,
 }
 
-PalWazaIDs.WhiteTiger = {
+PalsLevelSkills.WhiteTiger = {
    POWER_SHOT = 11,
    ICE_MISSILE = 78,
    STONE_CANNON = 85,
@@ -808,7 +808,7 @@ PalWazaIDs.WhiteTiger = {
    BLIZZARD_SPIKE = 81,
 }
 
-PalWazaIDs.Manticore = {
+PalsLevelSkills.Manticore = {
    IGNIS_BLAST = 36,
    POWER_SHOT = 11,
    FLARE_ARROW = 39,
@@ -818,7 +818,7 @@ PalWazaIDs.Manticore = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.LazyDragon = {
+PalsLevelSkills.LazyDragon = {
    DRAGON_CANNON = 100,
    AQUA_GUN = 48,
    DRAGON_BURST = 99,
@@ -828,7 +828,7 @@ PalWazaIDs.LazyDragon = {
    DRAGON_METEOR = 97,
 }
 
-PalWazaIDs.SakuraSaurus = {
+PalsLevelSkills.SakuraSaurus = {
    WIND_CUTTER = 57,
    SAND_BLAST = 87,
    MUSCLE_SLAM = 129,
@@ -837,7 +837,7 @@ PalWazaIDs.SakuraSaurus = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.FlowerDoll = {
+PalsLevelSkills.FlowerDoll = {
    WIND_CUTTER = 57,
    AQUA_GUN = 48,
    SEED_MACHINE_GUN = 60,
@@ -846,7 +846,7 @@ PalWazaIDs.FlowerDoll = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.VolcanicMonster = {
+PalsLevelSkills.VolcanicMonster = {
    IGNIS_BLAST = 36,
    STONE_BLAST = 88,
    STONE_CANNON = 85,
@@ -856,7 +856,7 @@ PalWazaIDs.VolcanicMonster = {
    ROCK_LANCE = 86,
 }
 
-PalWazaIDs.KingAlpaca = {
+PalsLevelSkills.KingAlpaca = {
    SAND_BLAST = 87,
    POWER_SHOT = 11,
    POWER_BOMB = 12,
@@ -865,7 +865,7 @@ PalWazaIDs.KingAlpaca = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.GrassMammoth = {
+PalsLevelSkills.GrassMammoth = {
    SAND_BLAST = 87,
    SEED_MACHINE_GUN = 60,
    POWER_BOMB = 12,
@@ -874,7 +874,7 @@ PalWazaIDs.GrassMammoth = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.Yeti = {
+PalsLevelSkills.Yeti = {
    ICE_MISSILE = 78,
    WIND_CUTTER = 57,
    ICICLE_CUTTER = 83,
@@ -884,7 +884,7 @@ PalWazaIDs.Yeti = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.HerculesBeetle = {
+PalsLevelSkills.HerculesBeetle = {
    WIND_CUTTER = 57,
    SEED_MACHINE_GUN = 60,
    STONE_BLAST = 88,
@@ -894,7 +894,7 @@ PalWazaIDs.HerculesBeetle = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.FengyunDeeper = {
+PalsLevelSkills.FengyunDeeper = {
    AIR_CANNON = 22,
    AQUA_GUN = 48,
    CLOUD_TEMPEST = 28,
@@ -904,7 +904,7 @@ PalWazaIDs.FengyunDeeper = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.CatVampire = {
+PalsLevelSkills.CatVampire = {
    POISON_BLAST = 94,
    DARK_BALL = 110,
    SHADOW_BURST = 91,
@@ -914,7 +914,7 @@ PalWazaIDs.CatVampire = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.SkyDragon = {
+PalsLevelSkills.SkyDragon = {
    DRAGON_CANNON = 100,
    SPIRIT_FIRE = 40,
    ACID_RAIN = 55,
@@ -924,7 +924,7 @@ PalWazaIDs.SkyDragon = {
    DRAGON_METEOR = 97,
 }
 
-PalWazaIDs.KingBahamut = {
+PalsLevelSkills.KingBahamut = {
    POWER_SHOT = 11,
    IGNIS_BLAST = 36,
    STONE_BLAST = 88,
@@ -934,7 +934,7 @@ PalWazaIDs.KingBahamut = {
    ROCK_LANCE = 86,
 }
 
-PalWazaIDs.HadesBird = {
+PalsLevelSkills.HadesBird = {
    SPIRIT_FIRE = 40,
    DARK_BALL = 110,
    SHADOW_BURST = 91,
@@ -944,7 +944,7 @@ PalWazaIDs.HadesBird = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.BlackMetalDragon = {
+PalsLevelSkills.BlackMetalDragon = {
    DRAGON_CANNON = 100,
    SPIRIT_FLAME = 95,
    DRAGON_BURST = 99,
@@ -954,7 +954,7 @@ PalWazaIDs.BlackMetalDragon = {
    DRAGON_METEOR = 97,
 }
 
-PalWazaIDs.DarkScorpion = {
+PalsLevelSkills.DarkScorpion = {
    SAND_BLAST = 87,
    POISON_BLAST = 94,
    SHADOW_BURST = 91,
@@ -964,7 +964,7 @@ PalWazaIDs.DarkScorpion = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.Anubis = {
+PalsLevelSkills.Anubis = {
    STONE_BLAST = 88,
    POWER_BOMB = 12,
    SAND_TORNADO = 84,
@@ -974,7 +974,7 @@ PalWazaIDs.Anubis = {
    ROCK_LANCE = 86,
 }
 
-PalWazaIDs.Umihebi = {
+PalsLevelSkills.Umihebi = {
    AQUA_GUN = 48,
    DRAGON_CANNON = 100,
    DRACONIC_BREATH = 98,
@@ -983,7 +983,7 @@ PalWazaIDs.Umihebi = {
    DRAGON_METEOR = 97,
 }
 
-PalWazaIDs.Suzaku = {
+PalsLevelSkills.Suzaku = {
    AIR_CANNON = 22,
    IGNIS_BLAST = 36,
    SPIRIT_FIRE = 40,
@@ -993,7 +993,7 @@ PalWazaIDs.Suzaku = {
    FIRE_BALL = 38,
 }
 
-PalWazaIDs.ElecPanda = {
+PalsLevelSkills.ElecPanda = {
    SPARK_BLAST = 73,
    SHOCKWAVE = 70,
    LIGHTNING_CLAW = 76,
@@ -1002,7 +1002,7 @@ PalWazaIDs.ElecPanda = {
    LIGHTNING_BOLT = 71,
 }
 
-PalWazaIDs.LilyQueen = {
+PalsLevelSkills.LilyQueen = {
    WIND_CUTTER = 57,
    SEED_MACHINE_GUN = 60,
    SEED_MINE = 61,
@@ -1011,7 +1011,7 @@ PalWazaIDs.LilyQueen = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.Horus = {
+PalsLevelSkills.Horus = {
    IGNIS_BLAST = 36,
    FLARE_ARROW = 39,
    SPIRIT_FIRE = 40,
@@ -1021,7 +1021,7 @@ PalWazaIDs.Horus = {
    FIRE_BALL = 38,
 }
 
-PalWazaIDs.ThunderDragonMan = {
+PalsLevelSkills.ThunderDragonMan = {
    KERAUNO = 130,
    LIGHTNING_STRIKE = 75,
    SPARK_BLAST = 73,
@@ -1030,7 +1030,7 @@ PalWazaIDs.ThunderDragonMan = {
    LIGHTNING_BOLT = 71,
 }
 
-PalWazaIDs.BlackGriffon = {
+PalsLevelSkills.BlackGriffon = {
    AIR_CANNON = 22,
    DARK_BALL = 110,
    SHADOW_BURST = 91,
@@ -1040,7 +1040,7 @@ PalWazaIDs.BlackGriffon = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.SaintCentaur = {
+PalsLevelSkills.SaintCentaur = {
    POWER_SHOT = 11,
    ICE_MISSILE = 78,
    ICEBERG = 79,
@@ -1050,7 +1050,7 @@ PalWazaIDs.SaintCentaur = {
    PAL_BLAST = 10,
 }
 
-PalWazaIDs.BlackCentaur = {
+PalsLevelSkills.BlackCentaur = {
    SHADOW_BURST = 91,
    SPIRIT_FIRE = 40,
    SPIRIT_FLAME = 95,
@@ -1060,7 +1060,7 @@ PalWazaIDs.BlackCentaur = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.IceHorse = {
+PalsLevelSkills.IceHorse = {
    AIR_CANNON = 22,
    ICE_MISSILE = 78,
    ICICLE_CUTTER = 83,
@@ -1070,7 +1070,7 @@ PalWazaIDs.IceHorse = {
    BLIZZARD_SPIKE = 81,
 }
 
-PalWazaIDs.JetDragon = {
+PalsLevelSkills.JetDragon = {
    SPIRIT_FIRE = 40,
    DRAGON_BURST = 99,
    FLARE_STORM = 42,
@@ -1080,7 +1080,7 @@ PalWazaIDs.JetDragon = {
    DRAGON_METEOR = 97,
 }
 
-PalWazaIDs.Hedgehog_Ice = {
+PalsLevelSkills.Hedgehog_Ice = {
    ICE_MISSILE = 78,
    POWER_SHOT = 11,
    ICEBERG = 79,
@@ -1090,7 +1090,7 @@ PalWazaIDs.Hedgehog_Ice = {
    BLIZZARD_SPIKE = 81,
 }
 
-PalWazaIDs.Bastet_Ice = {
+PalsLevelSkills.Bastet_Ice = {
    ICE_MISSILE = 78,
    AIR_CANNON = 22,
    SAND_BLAST = 87,
@@ -1100,7 +1100,7 @@ PalWazaIDs.Bastet_Ice = {
    BLIZZARD_SPIKE = 81,
 }
 
-PalWazaIDs.SharkKid_Fire = {
+PalsLevelSkills.SharkKid_Fire = {
    IGNIS_BLAST = 36,
    POWER_SHOT = 11,
    SPIRIT_FIRE = 40,
@@ -1110,7 +1110,7 @@ PalWazaIDs.SharkKid_Fire = {
    IGNIS_RAGE = 43,
 }
 
-PalWazaIDs.WindChimes_Ice = {
+PalsLevelSkills.WindChimes_Ice = {
    AIR_CANNON = 22,
    ICE_MISSILE = 78,
    POWER_SHOT = 11,
@@ -1120,7 +1120,7 @@ PalWazaIDs.WindChimes_Ice = {
    BLIZZARD_SPIKE = 81,
 }
 
-PalWazaIDs.GrassPanda_Electric = {
+PalsLevelSkills.GrassPanda_Electric = {
    SPARK_BLAST = 73,
    SHOCKWAVE = 70,
    LIGHTNING_STREAK = 67,
@@ -1129,7 +1129,7 @@ PalWazaIDs.GrassPanda_Electric = {
    LIGHTNING_BOLT = 71,
 }
 
-PalWazaIDs.Deer_Ground = {
+PalsLevelSkills.Deer_Ground = {
    POWER_SHOT = 11,
    ANTLER_UPPERCUT = 9,
    STONE_BLAST = 88,
@@ -1139,7 +1139,7 @@ PalWazaIDs.Deer_Ground = {
    ROCK_LANCE = 86,
 }
 
-PalWazaIDs.Baphomet_Dark = {
+PalsLevelSkills.Baphomet_Dark = {
    IGNIS_BLAST = 36,
    SPIRIT_FIRE = 40,
    FLARE_ARROW = 39,
@@ -1149,7 +1149,7 @@ PalWazaIDs.Baphomet_Dark = {
    IGNIS_RAGE = 43,
 }
 
-PalWazaIDs.LizardMan_Fire = {
+PalsLevelSkills.LizardMan_Fire = {
    IGNIS_BLAST = 36,
    POISON_BLAST = 94,
    SPIRIT_FIRE = 40,
@@ -1159,7 +1159,7 @@ PalWazaIDs.LizardMan_Fire = {
    FIRE_BALL = 38,
 }
 
-PalWazaIDs.RobinHood_Ground = {
+PalsLevelSkills.RobinHood_Ground = {
    SAND_BLAST = 87,
    WIND_CUTTER = 57,
    FOCUS_SHOT = 24,
@@ -1169,7 +1169,7 @@ PalWazaIDs.RobinHood_Ground = {
    ROCK_LANCE = 86,
 }
 
-PalWazaIDs.FireKirin_Dark = {
+PalsLevelSkills.FireKirin_Dark = {
    IGNIS_BLAST = 36,
    SHADOW_BURST = 91,
    IGNIS_BREATH = 37,
@@ -1179,7 +1179,7 @@ PalWazaIDs.FireKirin_Dark = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.FlowerDinosaur_Electric = {
+PalsLevelSkills.FlowerDinosaur_Electric = {
    SHOCKWAVE = 70,
    PLASMA_TORNADO = 72,
    BOTANICAL_SMASH = 17,
@@ -1188,7 +1188,7 @@ PalWazaIDs.FlowerDinosaur_Electric = {
    LIGHTNING_BOLT = 71,
 }
 
-PalWazaIDs.Serpent_Ground = {
+PalsLevelSkills.Serpent_Ground = {
    SAND_BLAST = 87,
    DRAGON_CANNON = 100,
    STONE_BLAST = 88,
@@ -1198,7 +1198,7 @@ PalWazaIDs.Serpent_Ground = {
    ROCK_LANCE = 86,
 }
 
-PalWazaIDs.BirdDragon_Ice = {
+PalsLevelSkills.BirdDragon_Ice = {
    AIR_CANNON = 22,
    ICE_MISSILE = 78,
    ICICLE_CUTTER = 83,
@@ -1208,7 +1208,7 @@ PalWazaIDs.BirdDragon_Ice = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.FairyDragon_Water = {
+PalsLevelSkills.FairyDragon_Water = {
    AQUA_GUN = 48,
    DRAGON_CANNON = 100,
    DRAGON_BURST = 99,
@@ -1218,7 +1218,7 @@ PalWazaIDs.FairyDragon_Water = {
    DRAGON_METEOR = 97,
 }
 
-PalWazaIDs.Kelpie_Fire = {
+PalsLevelSkills.Kelpie_Fire = {
    IGNIS_BLAST = 36,
    DRAGON_CANNON = 100,
    SPIRIT_FIRE = 40,
@@ -1228,7 +1228,7 @@ PalWazaIDs.Kelpie_Fire = {
    FIRE_BALL = 38,
 }
 
-PalWazaIDs.Manticore_Dark = {
+PalsLevelSkills.Manticore_Dark = {
    SHADOW_BURST = 91,
    FLARE_ARROW = 39,
    IGNIS_BREATH = 37,
@@ -1238,7 +1238,7 @@ PalWazaIDs.Manticore_Dark = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.LazyDragon_Electric = {
+PalsLevelSkills.LazyDragon_Electric = {
    SPARK_BLAST = 73,
    DRAGON_CANNON = 100,
    SHOCKWAVE = 70,
@@ -1248,7 +1248,7 @@ PalWazaIDs.LazyDragon_Electric = {
    LIGHTNING_BOLT = 71,
 }
 
-PalWazaIDs.SakuraSaurus_Water = {
+PalsLevelSkills.SakuraSaurus_Water = {
    AQUA_GUN = 48,
    BUBBLE_BLAST = 54,
    MUSCLE_SLAM = 129,
@@ -1257,7 +1257,7 @@ PalWazaIDs.SakuraSaurus_Water = {
    HYDRO_LASER = 50,
 }
 
-PalWazaIDs.VolcanicMonster_Ice = {
+PalsLevelSkills.VolcanicMonster_Ice = {
    ICE_MISSILE = 78,
    STONE_BLAST = 88,
    ICEBERG = 79,
@@ -1267,7 +1267,7 @@ PalWazaIDs.VolcanicMonster_Ice = {
    ROCK_LANCE = 86,
 }
 
-PalWazaIDs.KingAlpaca_Ice = {
+PalsLevelSkills.KingAlpaca_Ice = {
    ICE_MISSILE = 78,
    ICICLE_CUTTER = 83,
    ICEBERG = 79,
@@ -1277,7 +1277,7 @@ PalWazaIDs.KingAlpaca_Ice = {
    BLIZZARD_SPIKE = 81,
 }
 
-PalWazaIDs.GrassMammoth_Ice = {
+PalsLevelSkills.GrassMammoth_Ice = {
    STONE_CANNON = 85,
    ICICLE_CUTTER = 83,
    POWER_BOMB = 12,
@@ -1287,7 +1287,7 @@ PalWazaIDs.GrassMammoth_Ice = {
    BLIZZARD_SPIKE = 81,
 }
 
-PalWazaIDs.Yeti_Grass = {
+PalsLevelSkills.Yeti_Grass = {
    WIND_CUTTER = 57,
    AQUA_GUN = 48,
    SEED_MINE = 61,
@@ -1296,7 +1296,7 @@ PalWazaIDs.Yeti_Grass = {
    SOLAR_BLAST = 59,
 }
 
-PalWazaIDs.Umihebi_Fire = {
+PalsLevelSkills.Umihebi_Fire = {
    IGNIS_BLAST = 36,
    DRAGON_CANNON = 100,
    FLARE_STORM = 42,
@@ -1305,7 +1305,7 @@ PalWazaIDs.Umihebi_Fire = {
    DRAGON_METEOR = 97,
 }
 
-PalWazaIDs.Suzaku_Water = {
+PalsLevelSkills.Suzaku_Water = {
    HYDRO_JET = 53,
    ICE_MISSILE = 78,
    AQUA_GUN = 48,
@@ -1315,7 +1315,7 @@ PalWazaIDs.Suzaku_Water = {
    HYDRO_LASER = 50,
 }
 
-PalWazaIDs.LilyQueen_Dark = {
+PalsLevelSkills.LilyQueen_Dark = {
    DARK_BALL = 110,
    ICICLE_CUTTER = 83,
    SHADOW_BURST = 91,
@@ -1325,7 +1325,7 @@ PalWazaIDs.LilyQueen_Dark = {
    DARK_LASER = 90,
 }
 
-PalWazaIDs.IceHorse_Dark = {
+PalsLevelSkills.IceHorse_Dark = {
    AIR_CANNON = 22,
    DARK_BALL = 110,
    SHADOW_BURST = 91,
@@ -1335,4 +1335,4 @@ PalWazaIDs.IceHorse_Dark = {
    DARK_LASER = 90,
 }
 
-return PalWazaIDs
+return PalsLevelSkills

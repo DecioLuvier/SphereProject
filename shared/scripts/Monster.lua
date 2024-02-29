@@ -1,30 +1,40 @@
-local PalWazaData = require("enums/PalWaza")
-local PalData = require("enums/Pal")
-local NpcData = require("enums/Npc")
-local WazaData = require("enums/Waza")
+local Pals = require("enums/Pals")
+local PalsFruitsSkills = require("enums/PalsFruitsSkills")
+local PalsLevelSkills = require("enums/PalsLevelSkills")
+local Skills = require("enums/Skills")
 
 local Monster = {}
 
----@param palDebugName string
----@param wazaDebugName string
+---@param PalName string
+---@param SkillName string
 ---@return boolean
-function Monster.CanLearnWaza(palDebugName,wazaDebugName)
-    if not PalData[palDebugName] then --Check if is a valid pal, since NPC cannot learn Waza.
-        return false
-    elseif WazaData[wazaDebugName] then --Check if the waza is a fruit skill.
-        return WazaData[wazaDebugName]
-    elseif PalWazaData[palDebugName][wazaDebugName] then --Check if a pal learn the Waza by level up.
-        return PalWazaData[palDebugName][wazaDebugName]
+function Monster.CanLearnWaza(PalName,SkillName)
+    if Monster.IsMonsterDebugNameValid(PalName) and Monster.IsSkillDebugNameValid(SkillName) then
+        if PalsLevelSkills[PalName][SkillName] or PalsFruitsSkills[SkillName] then
+            return true
+        else
+            return false
+        end
     else
-        return false  
+        return false
     end
 end
 
 ---@param monsterName string
----@return string
+---@return string|boolean
 function Monster.IsMonsterDebugNameValid(monsterName)
-    if PalData[monsterName] or NpcData[monsterName] then 
+    if Pals[monsterName] then 
         return monsterName
+    else
+        return false
+    end
+end
+
+---@param skillName string
+---@return string|boolean
+function Monster.IsSkillDebugNameValid(skillName)
+    if Skills[skillName] then 
+        return skillName
     else
         return false
     end
