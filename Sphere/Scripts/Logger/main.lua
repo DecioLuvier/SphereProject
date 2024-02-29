@@ -23,7 +23,8 @@ function Logger.print(message)
     if type(message) == "table" then
         logArray(message)
     else
-        os.execute(string.format("echo %s %s", Logger.prefix, message))
+        local time = os.date("%H:%M:%S")
+        io.stdout:write(string.format("%s %s %s\n",time, Logger.prefix, message))
     end
 end
 
