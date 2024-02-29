@@ -47,6 +47,7 @@ Config.default = {
         "giveegg",
         "jetragon",
         "catwaifu",
+        "goto"
     }
 }
 

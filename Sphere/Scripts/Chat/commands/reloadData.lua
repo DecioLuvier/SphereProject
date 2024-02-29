@@ -1,5 +1,6 @@
 local Logger = require("Logger/Main")
 local DataManager = require("DataManager/main")
+local System = require("scripts/System")
 
 local reloadData = {}
 
@@ -16,6 +17,7 @@ function reloadData.execute(sender, arguments)
     if valid then
         SphereGlobal.database = result
         System.SendSystemToPlayer(sender, "Success")
+        Logger.print("DataManager.refresh completed successfully!")
     else
         Logger.print(result)
     end
