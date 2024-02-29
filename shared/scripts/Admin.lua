@@ -1,6 +1,5 @@
 local Static = require("scripts/Static")
 local Player = require("scripts/Player")
-
 local FVector = require("constructors/FVector")
 local FQuat = require("constructors/FQuat")
 

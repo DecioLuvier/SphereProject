@@ -1,7 +1,4 @@
 local Static = require("scripts/Static")
-
-local Permissions = require("enums/Permissions")
-
 local FVector = require("constructors/FVector")
 
 local Player = {}
@@ -9,20 +6,11 @@ local Player = {}
 ---@param PlayerController APalPlayerController
 ---@return string
 function Player.GetPermissionName(PlayerController)
+
     if PlayerController.bAdmin then
         return "Admin"
     else
         return "Member"
-    end
-end
-
----@param input string
----@param target string
-function Player.ComparatePermissionLevel(input,target)
-    if Permissions[input] >= Permissions[target] then
-        return true
-    else
-        return false
     end
 end
 
@@ -48,22 +36,43 @@ function Player.GetName(PlayerController)
     return PalPlayerState.PlayerNamePrivate:ToString()
 end
 
----@param Id number|string
+
+--Ok, this code here is a mess, until I find a new way to look for the steamID, 
+--unfortunately it is what it is  :/
+---@param SteamID number
 ---@return APalPlayerController
-function Player.GetController(Id)
-    local idNumber = tonumber(Id)
-    if idNumber then --If the ID has a letter or nil just ignore
-        local players = FindAllOf("PalPlayerController")
-        for i = 1, #players do
-            local player = players[i] ---@type APalPlayerController
-            local playerState = player:GetPalPlayerState()
-            if playerState then
-                if idNumber == playerState.PlayerUId.A then
-                    return player
-                end
+function Player.GetPlayerController(SteamID)
+    local palUtility =  Static.GetPalUtility()
+    local allPlayersInfo = palUtility:GetPlayerListDisplayMessages(Static.GetWorld()) 
+
+    if allPlayersInfo then
+        for i = 1, #allPlayersInfo do
+            --"Luvier,806377371,76561198071615417"
+            local playerInfoString = allPlayersInfo[i]:get():ToString()
+            --I just put on gpt some optimization is needed
+            local playerInfo = {}
+            local lastCommaIndex = playerInfoString:find(",[^,]*$")
+
+            if lastCommaIndex then
+                playerInfo[3] = playerInfoString:sub(lastCommaIndex + 1)
+                playerInfoString = playerInfoString:sub(1, lastCommaIndex - 1)
             end
-            if idNumber == playerState.PlayerId then
-                return player
+            for token in playerInfoString:gmatch("[^,]+") do
+                table.insert(playerInfo, token)
+            end
+            --
+            if SteamID == tonumber(playerInfo[3]) then
+                local allplayersControllers = FindAllOf("PalPlayerController")
+
+                for i = 1, #allplayersControllers do
+                    local player = allplayersControllers[i] ---@type APalPlayerController
+                    local playerState = player:GetPalPlayerState()
+                    if playerState then
+                        if tonumber(playerInfo[2]) == playerState.PlayerUId.A then
+                            return player
+                        end
+                    end
+                end
             end
         end
     end
