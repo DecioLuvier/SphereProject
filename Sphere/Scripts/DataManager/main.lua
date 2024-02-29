@@ -75,7 +75,9 @@ local function InitFolders()
         if FolderExistsValid then
             if not FolderExistsResult then
                 Logger.print("Creating " .. realPath)
-                local mkdirResult = os.execute("mkdir " .. realPath)
+                local command = io.popen(string.format("mkdir %s", realPath))
+                local mkdirResult = command:read("*a") 
+                command:close()
 
                 if not mkdirResult then
                     return false, "InitFolders mkdirErrors"
