@@ -15,104 +15,50 @@ CustomKits.validate = validation.is_array(
 )
 
 CustomKits.default = {
-    Noob = {
+    Alchemist = {
         Items = {
-            {
-                ItemID = "Pickaxe_Tier_00",
-                Quantity = 1
-            },
-            {
-                ItemID = "Axe_Tier_00",
-                Quantity = 1
-            },
-            {
-                ItemID = "Torch",
-                Quantity = 1
-            },
-            {
-                ItemID = "Bat",
-                Quantity = 1
-            },
-            {
-                ItemID = "PalSphere",
-                Quantity = 5
-            }
+            { Quantity = 100, ItemID = "Horn" },
+            { Quantity = 30, ItemID = "Bone" },
+            { Quantity = 50, ItemID = "Berries" }
         }
     },
     Pro = {
         Items = {
-            {
-                ItemID = "PalSphere_Mega",
-                Quantity = 5
-            },
-            {
-                ItemID = "ClothArmor",
-                Quantity = 1
-            }
+            { Quantity = 5, ItemID = "PalSphere_Mega" },
+            { Quantity = 1, ItemID = "ClothArmor" }
         }
     },
-    Farmer = {
+    Noob = {
         Items = {
-            {
-                ItemID = "Pan",
-                Quantity = 30
-            },
-            {
-                ItemID = "Pancake",
-                Quantity = 10
-            }
-        }
-    },
-    Alchemist = {
-        Items = {
-            {
-                ItemID = "Horn",
-                Quantity = 100
-            },
-            {
-                ItemID = "Bone",
-                Quantity = 30
-            },
-            {
-                ItemID = "Berries",
-                Quantity = 50
-            }
+            { Quantity = 1, ItemID = "Pickaxe_Tier_00" },
+            { Quantity = 1, ItemID = "Axe_Tier_00" },
+            { Quantity = 1, ItemID = "Torch" },
+            { Quantity = 1, ItemID = "Bat" },
+            { Quantity = 5, ItemID = "PalSphere" }
         }
     },
     Reaper = {
         Items = {
-            {
-                ItemID = "PalUpgradeStone",
-                Quantity = 20
-            },
-            {
-                ItemID = "PalUpgradeStone2",
-                Quantity = 8
-            },
-            {
-                ItemID = "PalUpgradeStone3",
-                Quantity = 4
-            }
-        }
-    },
-    Breeder = {
-        Items = {
-            {
-                ItemID = "Cake",
-                Quantity = 20
-            }
+            { Quantity = 20, ItemID = "PalUpgradeStone" },
+            { Quantity = 8, ItemID = "PalUpgradeStone2" },
+            { Quantity = 4, ItemID = "PalUpgradeStone3" }
         }
     },
     Admin = {
         Items = {
-            {
-                ItemID = "HandGun_Default_5",
-                Quantity = 1
-            },
-            {
-                ItemID = "HandgunBullet",
-                Quantity = 100
-            }
+            { Quantity = 1, ItemID = "HandGun_Default_5" },
+            { Quantity = 100, ItemID = "HandgunBullet" }
+        }
+    },
+    Breeder = {
+        Items = {
+            { Quantity = 20, ItemID = "Cake" }
+        }
+    },
+    Farmer = {
+        Items = {
+            { Quantity = 30, ItemID = "Pan" },
+            { Quantity = 10, ItemID = "Pancake" }
         }
     }
 }

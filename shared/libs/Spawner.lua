@@ -31,6 +31,7 @@ local FPalSpawnerOneTribeInfo = require("constructors/FPalSpawnerOneTribeInfo")
 local FPalDataTableRowName_PalHumanData = require("constructors/FPalDataTableRowName_PalHumanData")
 local FPalDataTableRowName_PalMonsterData = require("constructors/FPalDataTableRowName_PalMonsterData")
 local PassiveSkills = require("enums/PassiveSkills")
+local Skills = require("enums/Skills")
 
 local Spawner = {}
 
@@ -139,35 +140,25 @@ ExecuteWithDelay(5000, function()
     
                 if PassiveSkillList then
                     SaveParameter.PassiveSkillList:Empty()
+
                     for l = 1, #PassiveSkillList do
                         IndividualParameter.AddPassiveSkill(FName("None"),FName(PassiveSkills[PassiveSkillList[l]]), FName("None"))
                     end 
                 end
     
                 if EquipedSkills then
-                    local ValidEquipedSkills = {}
-
-                    for l = 1, #EquipedSkills do
-                        ValidEquipedSkills[#ValidEquipedSkills + 1] = EquipedSkills[l]
-                    end      
                     IndividualParameter:ClearEquipWaza()
-
-                    for l = 1, #ValidEquipedSkills do
-                        IndividualParameter:AddEquipWaza(ValidEquipedSkills[l])
+                    for l = 1, #EquipedSkills do
+                        IndividualParameter:AddEquipWaza(Skills[EquipedSkills[l]])
                     end
                 end
     
                 if MasteredSkills then
-                    local ValidMasteredSkills = {}
-
-                    for l = 1, #MasteredSkills do
-                        ValidMasteredSkills[#ValidMasteredSkills + 1] = MasteredSkills[l]
-                    end      
                     SaveParameter.MasteredWaza:Empty()
 
-                    for l = 1, #ValidMasteredSkills do
+                    for l = 1, #MasteredSkills do
                         SaveParameter.MasteredWaza[l + 1] = FName("None")
-                        SaveParameter.MasteredWaza[l] = ValidMasteredSkills[l]
+                        SaveParameter.MasteredWaza[l] = Skills[MasteredSkills[l]]
                     end
                 end
                 PostCallback(spawnedInstance, table.unpack(CallbackParameters))

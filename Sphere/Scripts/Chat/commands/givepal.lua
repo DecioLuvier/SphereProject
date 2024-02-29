@@ -13,7 +13,7 @@ function givepal.execute(sender, arguments)
         local givePlayer = Player.GetPlayerController(tonumber(arguments[2]))
 
         if givePlayer ~= nil then
-            local customPal = SphereGlobal.database.Pals[string.lower(arguments[3])]
+            local customPal = SphereGlobal.database.Pals[arguments[3]]
             
             if customPal then
                 Spawner.Spawn(customPal, Spawner.CallbackCaptureToPlayer,{ givePlayer:GetControlPalCharacter() })

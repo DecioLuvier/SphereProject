@@ -24,7 +24,7 @@ function Logger.print(message)
         logArray(message)
     else
         local time = os.date("%H:%M:%S")
-        io.stdout:write(string.format("%s %s %s\n",time, Logger.prefix, message))
+        io.stdout:write(string.format("%s %s %s\n", time, Logger.prefix, message))
     end
 end
 

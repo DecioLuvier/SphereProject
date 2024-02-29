@@ -14,7 +14,7 @@ function kit.execute(sender, arguments)
         local givePlayer = Player.GetPlayerController(tonumber(arguments[2]))
 
         if givePlayer ~= nil then
-            local customKit = SphereGlobal.database.Kits[string.lower(arguments[3])]
+            local customKit = SphereGlobal.database.Kits[arguments[3]]
 
             if customKit then
 
