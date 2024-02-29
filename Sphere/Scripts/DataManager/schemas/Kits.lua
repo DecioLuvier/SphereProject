@@ -30,7 +30,7 @@ CustomKits.default = {
                 Quantity = 1
             },
             {
-                ItemID = "Wooden Club",
+                ItemID = "Bat",
                 Quantity = 1
             },
             {
@@ -54,7 +54,7 @@ CustomKits.default = {
     Farmer = {
         Items = {
             {
-                ItemID = "Bread",
+                ItemID = "Pan",
                 Quantity = 30
             },
             {
@@ -74,7 +74,7 @@ CustomKits.default = {
                 Quantity = 30
             },
             {
-                ItemID = "Red Berries",
+                ItemID = "Berries",
                 Quantity = 50
             }
         }
