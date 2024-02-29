@@ -23,6 +23,7 @@ function kit.execute(sender, arguments)
                     for _, item in ipairs( customKit["Items"]) do
                         Admin.GiveItemToPlayer(givePlayer,item["ItemID"], item["Quantity"])
                     end
+                    System.SendSystemToPlayer(sender, "Success")
                 end
             else
                 System.SendSystemToPlayer(sender, "Invalid Kit Name")
