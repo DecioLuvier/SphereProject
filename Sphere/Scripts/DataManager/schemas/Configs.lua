@@ -29,7 +29,7 @@ Config.default = {
         "info",
         "save",
         "adminpassword",
-        -- Palguard 
+        -- Palguard Support
         "reloadcfg",
         "imcheater",
         "kick",
@@ -47,7 +47,8 @@ Config.default = {
         "giveegg",
         "jetragon",
         "catwaifu",
-        "goto"
+        "goto",
+        "give"
     }
 }
 
