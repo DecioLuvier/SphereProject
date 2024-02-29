@@ -24,7 +24,7 @@ function teleport.execute(sender, arguments)
                 if selectedPalBox then
                     local palboxTarget = Palbox.GetPalBoxLocation(selectedPalBox)
                     Admin.TeleportCharacterToLocation(targetPlayer:GetControlPalCharacter(),palboxTarget)
-                    System.SendSystemToPlayer(sender, "success")
+                    System.SendSystemToPlayer(sender, "Success")
                 else
                     System.SendSystemToPlayer(sender, "Palbox to teleport not found")
                 end

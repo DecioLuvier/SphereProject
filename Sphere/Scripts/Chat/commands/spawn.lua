@@ -14,6 +14,7 @@ function spawn.execute(sender, arguments)
 
         if customPal then
             Spawner.Spawn(customPal, Spawner.CallbackTeleportToCharacter,{ sender:GetControlPalCharacter() })
+            System.SendSystemToPlayer(sender, "Success")
         else
             System.SendSystemToPlayer(sender, "Invalid DataPalName")
         end

@@ -15,7 +15,7 @@ function reloadData.execute(sender, arguments)
 
     if valid then
         SphereGlobal.database = result
-        Logger.print("DataManager.refresh completed successfully!")
+        System.SendSystemToPlayer(sender, "Success")
     else
         Logger.print(result)
     end
