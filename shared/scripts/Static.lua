@@ -20,4 +20,8 @@ function Static.GetTimeManager()
     return FindFirstOf("PalTimeManager")
 end
 
+---@return UPalMapObjectManager
+function Static.GetMapObjectManager()
+    return FindFirstOf("PalMapObjectManager")
+end
 return Static

@@ -21,6 +21,9 @@ function Utilities.MergeTables(Userdata, data)
     end
 end
 
+---@param table1 table
+---@param table2 table
+---@return boolean
 function Utilities.CompareTables(table1, table2)
 
     if type(table1) ~= type(table2) then
@@ -42,6 +45,18 @@ function Utilities.CompareTables(table1, table2)
         end
     end
     return true
+end
+
+---@param array V[]
+---@param valueToCheck any
+---@return boolean
+function Utilities.ArrayContainValue(array, valueToCheck)
+    for _, value in ipairs(array) do
+        if value == valueToCheck then
+            return true
+        end
+    end
+    return false
 end
 
 return Utilities

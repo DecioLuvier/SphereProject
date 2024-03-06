@@ -2,7 +2,6 @@
 -- validation.lua
 --
 -- Copyright (c) 2016 erento
--- Copyright (c) 2024 DecioLuvier
 --
 -- Permission is hereby granted, free of charge, to any person obtaining a copy of
 -- this software and associated documentation files (the "Software"), to deal in

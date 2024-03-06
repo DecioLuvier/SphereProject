@@ -1,4 +1,4 @@
-local Spawner = require("libs/Spawner")
+local Spawner = require("scripts/Spawner")
 local System = require("scripts/System")
 local Player = require("scripts/Player")
 

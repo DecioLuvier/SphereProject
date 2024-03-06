@@ -1,4 +1,4 @@
-local Logger = require("Logger/Main")
+local Logger = require("libs/Logger")
 local DataManager = require("DataManager/main")
 local System = require("scripts/System")
 

@@ -1,5 +1,5 @@
 local System = require("scripts/System")
-local Spawner = require("libs/Spawner")
+local Spawner = require("scripts/Spawner")
 
 local spawn = {}
 

@@ -23,7 +23,7 @@
 --
 
 local Admin = require("scripts/Admin")
-local Utilities = require("scripts/Utilities")
+local Utilities = require("libs/Utilities")
 local Static = require("scripts/Static")
 local FPalSpawnerGroupList = require("constructors/FPalSpawnerGroupList")
 local FPalSpawnerGroupInfo = require("constructors/FPalSpawnerGroupInfo")

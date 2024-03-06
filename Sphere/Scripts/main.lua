@@ -1,20 +1,22 @@
-local Logger = require("Logger/Main")
+local Logger = require("libs/Logger")
+Logger.Initialize()
 local DataManager = require("DataManager/main")
-
-Logger.start()
 
 SphereGlobal = {}
 
-local valid, result = DataManager.Refresh()
+local validDataManager, resultDataManager =  DataManager.Refresh()
 
-if valid then
-    SphereGlobal.database = result
+if validDataManager then
+
+    SphereGlobal.database = resultDataManager
     require("Chat/main")
-    Logger.print("DataManager.refresh completed successfully!")
+
+    Logger.print("DataManager started with Success!")
 
     if SphereGlobal.database.Configs.CreditMessage then
-        Logger.credit()
+
+
     end
 else
-    Logger.print(result)
+    Logger.print(resultDataManager)
 end

@@ -1,4 +1,4 @@
-local validation = require("libs/validation")
+local validation = require("libs/Validator")
 local Monster = require("scripts/Monster") 
 local Pals = require("enums/Pals")
 local PassiveSkills = require("enums/PassiveSkills")
@@ -13,9 +13,9 @@ local function validationPalSkill()
         if not PalName then
           return false
         elseif not Monster.IsSkillDebugNameValid(PalSkill) then
-            return false, "Is not a valid"
+            return false, string.format("%s is not a valid skill", PalSkill)
         elseif not Monster.CanLearnWaza(PalName, PalSkill) then
-            return false, "pal cannot learn this ability"
+            return false, string.format("%s cannot learn %s", PalName, PalSkill)
         else
             return true
         end

@@ -9,9 +9,16 @@ local Monster = {}
 ---@param SkillName string
 ---@return boolean
 function Monster.CanLearnWaza(PalName,SkillName)
+
     if Monster.IsMonsterDebugNameValid(PalName) and Monster.IsSkillDebugNameValid(SkillName) then
-        if PalsLevelSkills[PalName][SkillName] or PalsFruitsSkills[SkillName] then
+        if PalsFruitsSkills[SkillName] then
             return true
+        elseif PalsLevelSkills[PalName] then
+            if PalsLevelSkills[PalName][SkillName] then
+                return true
+            else
+                return false
+            end
         else
             return false
         end

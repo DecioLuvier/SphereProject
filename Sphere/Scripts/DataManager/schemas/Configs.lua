@@ -1,4 +1,4 @@
-local validation = require("libs/validation")
+local validation = require("libs/Validator")
 
 local Config = {}
 

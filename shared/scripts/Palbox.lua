@@ -1,4 +1,4 @@
-local Utilities = require("scripts/Utilities")
+local Utilities = require("libs/Utilities")
 
 local Fguid = require("constructors/Fguid")
 local FVector = require("constructors/FVector")

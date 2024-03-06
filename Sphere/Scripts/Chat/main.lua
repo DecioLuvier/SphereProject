@@ -1,9 +1,9 @@
 --The inspiration for creating this plugin came from the repository 
 --https://github.com/aytimothy/PalworldEssentials/
 
+local Logger = require("libs/Logger")
 local Player = require("scripts/Player")
 local System = require("scripts/System")
-local Logger = require("Logger/main")
 local manager = require("Chat/config")
 local commands = manager["commands"]
 
@@ -54,6 +54,8 @@ local function ListenChatMessage(player, ChatMessage)
 
     if SphereGlobal.database.Configs.ShowGameChatOnConsole then
         Logger.print(FormatChatMessage(ChatMessage))
+    else
+        Logger.Log(FormatChatMessage(ChatMessage))
     end
 
     if string.match(messageText, "^/") then
@@ -64,8 +66,8 @@ local function ListenChatMessage(player, ChatMessage)
             local selectedCommand = commandArgs[1]
 
             if not IsNonSphereCommand(selectedCommand) then
-                ChatMessage.SenderPlayerUId["A"] = 2345678   --Remove default system message making "miss" target, 
-                ChatMessage.ReceiverPlayerUId["A"] = 2345678 --This should be revised in future versions
+                ChatMessage.SenderPlayerUId["A"] = -1  
+                ChatMessage.ReceiverPlayerUId["A"] = -1
 
                 if commands[selectedCommand] then
 

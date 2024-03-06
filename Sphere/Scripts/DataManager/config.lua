@@ -5,11 +5,6 @@ ConfigDataManager.paths = {}
 ConfigDataManager.paths.root = "Sphere\\"
 ConfigDataManager.paths.data =  ConfigDataManager.paths.root .. "Data\\"
 
-ConfigDataManager.pathOrder = {
-    "root", 
-    "data"
-}
-
 ConfigDataManager.entries = {
     Pals = {
         path = ConfigDataManager.paths.data,
