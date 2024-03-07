@@ -42,7 +42,7 @@ function teleport.execute(sender, arguments)
             end
         end
     else
-        System.SendSystemToPlayer(sender, "Usage: /tp SteamID or SteamID_PX(where x is the palbox number)")
+        System.SendSystemToPlayer(sender, "Usage: /tp SteamIDorUID or SteamIDorUID_PX(where x is the palbox number)")
     end
 end
 

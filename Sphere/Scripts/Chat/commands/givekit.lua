@@ -32,7 +32,7 @@ function kit.execute(sender, arguments)
             System.SendSystemToPlayer(sender, "Player Not found")
         end
     else
-        System.SendSystemToPlayer(sender, "Usage: /gkit SteamID DataKitName(Sphere/Data/Kit)")
+        System.SendSystemToPlayer(sender, "Usage: /gkit SteamIDorUID DataKitName(Sphere/Data/Kit)")
     end
 end
 

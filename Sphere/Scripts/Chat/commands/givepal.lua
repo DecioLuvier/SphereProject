@@ -25,7 +25,7 @@ function givepal.execute(sender, arguments)
             System.SendSystemToPlayer(sender, "Player not found")
         end
     else
-        System.SendSystemToPlayer(sender, "Usage: /gpal SteamID DataPalName(Sphere/Data/Pals)")
+        System.SendSystemToPlayer(sender, "Usage: /gpal SteamIDorUID DataPalName(Sphere/Data/Pals)")
     end
 end
 
