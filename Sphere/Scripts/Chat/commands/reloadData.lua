@@ -9,9 +9,6 @@ reloadData.permissionLevel = "Admin"
 ---@param sender APalPlayerController
 ---@param arguments string[]
 function reloadData.execute(sender, arguments)
-
-    Logger.print("a")
-
     local valid, result = DataManager.Refresh()
 
     if valid then

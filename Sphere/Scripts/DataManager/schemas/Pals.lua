@@ -80,6 +80,17 @@ CustomPals.default = {
             "SAND_TORNADO"
         }
     },
+    Soccerball = {
+        DebugID = "BOSS_SheepBall",
+        Level = 1,
+        Quantity = 1,
+        Stats = {
+            IsRarePal = true,
+        },
+        PassiveSkillList = {
+            "Destructive"
+        }
+    },
 }
 
 return CustomPals
