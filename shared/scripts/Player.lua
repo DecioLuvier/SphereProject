@@ -58,23 +58,13 @@ function Player.GetPlayerController(id)
 
             if id == SteamID or id == Uid then
                 Logger.Log(string.format("Found"))
-
-                --Should change
-                local allplayersControllers = FindAllOf("PalPlayerController")
-                for i = 1, #allplayersControllers do
-                    local player = allplayersControllers[i] ---@type APalPlayerController
-                    local playerState = player:GetPalPlayerState()
-                    if playerState then
-                        if Uid == playerState.PlayerUId.A then
-                            Logger.Log(string.format("Valid Uid"))
-                            return player
-                        else
-                            Logger.Log(string.format("Invalid Uid"))
-                        end
-                    end
+                local palPlayerCharacter = palUtility:GetPlayerCharacterByPlayerIndex(Static.GetWorld(), i - 1)
+                Logger.Log(palPlayerCharacter:GetFullName())
+                if palPlayerCharacter then
+                    return palPlayerCharacter:GetPalPlayerController()
+                else
+                    return false
                 end
-                --
-
             end
         end
     end
