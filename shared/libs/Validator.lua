@@ -67,6 +67,20 @@ function validation.is_number(validator)
 end
 
 ---@param validator? function
+function validation.is_positive(validator)
+  return function(value, key, data)
+
+    if value < 0 then
+      return false, 'is negative'
+    elseif validator then
+      return validator(value, key, data)
+    else
+      return true
+    end
+  end
+end
+
+---@param validator? function
 function validation.is_boolean(validator)
   return function(value, key, data)
     

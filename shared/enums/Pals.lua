@@ -1,4 +1,10 @@
 local Pal = {
+    ElecLion = "Boltmane",
+    BOSS_ElecLion = "Boltmane (Boss)",
+    DarkMutant = "Dark Mutant",
+    BOSS_DarkMutant = "Dark Mutant (Boss)",
+    BlackFurDragon = "Dragostrophe",
+    BOSS_BlackFurDragon = "Dragostrophe (Boss)",
     Anubis = "Anubis",
     Boss_Anubis = "Anubis (Boss)",
     FlameBuffalo = "Arsox",

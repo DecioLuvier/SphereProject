@@ -1,5 +1,29 @@
 local PalsLevelSkills = {}
 
+PalsLevelSkills.ElecLion = {
+   PUNCH = 1
+}
+
+PalsLevelSkills.BOSS_ElecLion = {
+   PUNCH = 1
+}
+
+PalsLevelSkills.DarkMutant = {
+   PUNCH = 1
+}
+
+PalsLevelSkills.BOSS_DarkMutant = {
+   PUNCH = 1
+}
+
+PalsLevelSkills.BlackFurDragon = {
+   PUNCH = 1
+}
+
+PalsLevelSkills.BOSS_BlackFurDragon = {
+   PUNCH = 1
+}
+
 PalsLevelSkills.Anubis = {
    STONE_BLAST = 88,
    POWER_BOMB = 12,

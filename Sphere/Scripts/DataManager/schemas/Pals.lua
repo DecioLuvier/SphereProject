@@ -31,14 +31,14 @@ CustomPals.validate = validation.is_array(
             NickName = validation.optional(validation.is_string()),
             IsRarePal = validation.optional(validation.is_boolean()),
             Rank = validation.optional(validation.is_integer(validation.in_range(0,5))),
-            Rank_HP = validation.optional(validation.is_integer(validation.in_range(0,5))),
-            Rank_Attack = validation.optional(validation.is_integer(validation.in_range(0,5))),
-            Rank_Defence = validation.optional(validation.is_integer(validation.in_range(0,5))),
-            Rank_CraftSpeed = validation.optional(validation.is_integer(validation.in_range(0,5))),
-            Talent_HP = validation.optional(validation.is_integer(validation.in_range(0,100))),
-            Talent_Melee = validation.optional(validation.is_integer(validation.in_range(0,100))),
-            Talent_Shot = validation.optional(validation.is_integer(validation.in_range(0,100))),
-            Talent_Defense = validation.optional(validation.is_integer(validation.in_range(0,100))),
+            Rank_HP = validation.optional(validation.is_integer(validation.is_positive())),
+            Rank_Attack = validation.optional(validation.is_integer(validation.is_positive())),
+            Rank_Defence = validation.optional(validation.is_integer(validation.is_positive())),
+            Rank_CraftSpeed = validation.optional(validation.is_integer(validation.is_positive())),
+            Talent_HP = validation.optional(validation.is_integer(validation.is_positive())),
+            Talent_Melee = validation.optional(validation.is_integer(validation.is_positive())),
+            Talent_Shot = validation.optional(validation.is_integer(validation.is_positive())),
+            Talent_Defense = validation.optional(validation.is_integer(validation.is_positive())),
         }),
         PassiveSkillList = validation.optional(validation.is_array(validation.array_max(4, validation.is_string(validation.is_KeyOfList(PassiveSkills))))),
         EquipedSkills = validation.optional(validation.is_array(validation.array_max(3, validationPalSkill()))),
@@ -90,6 +90,11 @@ CustomPals.default = {
         PassiveSkillList = {
             "Destructive"
         }
+    },
+    Secret = {
+        DebugID = "BlackFurDragon",
+        Level = 1,
+        Quantity = 1
     },
 }
 
