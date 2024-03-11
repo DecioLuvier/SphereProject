@@ -1,10 +1,34 @@
+
+local Static = require("scripts/Static")
+
+--Need rework WTF
 local Pals = require("enums/Pals")
 local PalsFruitsSkills = require("enums/PalsFruitsSkills")
 local PalsLevelSkills = require("enums/PalsLevelSkills")
 local Skills = require("enums/Skills")
 
+
 local Monster = {}
 
+---@param Monster AActor
+function Monster.GetDebugName(Monster)
+    local palUtility = Static.GetPalUtility()
+
+    local saveParameter = palUtility.GetIndividualCharacterParameterByActor(Static.GetWorld(),Monster).SaveParameter
+
+    local PalDebugName = saveParameter.CharacterID:ToString()
+    local NPCDebugName = saveParameter.UniqueNPCID:ToString()
+
+    if PalDebugName ~= "" then
+        return PalDebugName
+    elseif NPCDebugName ~= "" then
+        return NPCDebugName
+    else
+        return nil
+    end
+end
+
+--Need rework WTF
 ---@param PalName string
 ---@param SkillName string
 ---@return boolean

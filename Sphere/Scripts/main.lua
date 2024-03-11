@@ -2,7 +2,7 @@ local Logger = require("libs/Logger")
 Logger.Initialize()
 local DataManager = require("DataManager/main")
 
-Logger.print("Version: V2.4 03/10/2024")
+Logger.print("Version: V2.5 03/11/2024")
 Logger.print("Starting...")
 
 SphereGlobal = {}
