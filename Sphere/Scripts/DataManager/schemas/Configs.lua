@@ -7,6 +7,7 @@ Config.validate = validation.is_table {
     AllPlayersAdmin = validation.required(validation.is_boolean()),
     BroadcastJoin = validation.required(validation.is_boolean()),
     BroadcastExit = validation.required(validation.is_boolean()),
+    BroadcastDeath = validation.required(validation.is_boolean()),
     ShowGameChatOnConsole = validation.required(validation.is_boolean()),
     NonSphereCommands = validation.optional(validation.is_array(validation.is_string()))
 }
@@ -14,6 +15,7 @@ Config.validate = validation.is_table {
 Config.default = {
     CreditMessage = true,
     AllPlayersAdmin = false,
+    BroadcastDeath = true,
     BroadcastJoin = true,
     BroadcastExit = true,
     ShowGameChatOnConsole = true,

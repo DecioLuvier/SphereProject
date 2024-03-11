@@ -118,54 +118,56 @@ local Pals = require("enums/Pals")
 local Npcs = require("enums/Npcs")
 
 RegisterHook("/Game/Pal/Blueprint/Component/DamageReaction/BP_AIADamageReaction.BP_AIADamageReaction_C:OnDead", function(argument1, argument2)
-    local deadInfo = argument2:get() ---@type FPalDeadInfo
+    if SphereGlobal.database.Configs.BroadcastDeath then
+        local deadInfo = argument2:get() ---@type FPalDeadInfo
 
-    local victimType = System.GetInstanceType(deadInfo.SelfActor)
-    local killerType = System.GetInstanceType(deadInfo.LastAttacker)
+        local victimType = System.GetInstanceType(deadInfo.SelfActor)
+        local killerType = System.GetInstanceType(deadInfo.LastAttacker)
 
-    if (victimType == "Player") or (victimType == "Player" and killerType == "Player") then
+        if (victimType == "Player") or (victimType == "Player" and killerType == "Player") then
 
-        local victimName = nil
-        if victimType == "Player" then
-            victimName = Player.GetName(deadInfo.SelfActor:GetPalPlayerController())
-        else 
-            local debugName = Monster.GetDebugName(deadInfo.SelfActor)
-
-            if victimType == "WildNPC" then
-                victimName = Npcs[debugName]
-            else
-                victimName = Pals[debugName]
-            end
-        end
-
-        if deadInfo.DeadType == 1 then
-            local killerName = nil
-            if killerType == "Player" then
-                killerName = Player.GetName(deadInfo.LastAttacker:GetPalPlayerController())
+            local victimName = nil
+            if victimType == "Player" then
+                victimName = Player.GetName(deadInfo.SelfActor:GetPalPlayerController())
             else 
-                local debugName = Monster.GetDebugName(deadInfo.LastAttacker)
-    
-                if killerType == "WildNPC" then
-                    killerName = Npcs[debugName]
+                local debugName = Monster.GetDebugName(deadInfo.SelfActor)
+
+                if victimType == "WildNPC" then
+                    victimName = Npcs[debugName]
                 else
-                    killerName = Pals[debugName]
+                    victimName = Pals[debugName]
                 end
             end
-            System.SendSystemAnnounce(string.format("%s was killed by %s", victimName, killerName))
-        elseif deadInfo.DeadType == 2 then
-            System.SendSystemAnnounce(string.format("%s perished himself", victimName))
-        elseif deadInfo.DeadType == 3 then
-            System.SendSystemAnnounce(string.format("%s died to extreme weather", victimName))
-        elseif deadInfo.DeadType == 4 or deadInfo.DeadType == 9 then
-            System.SendSystemAnnounce(string.format("%s hit the ground too hard", victimName))
-        elseif deadInfo.DeadType == 5 then
-            System.SendSystemAnnounce(string.format("%s poisoned to death", victimName))
-        elseif deadInfo.DeadType == 6 then
-            System.SendSystemAnnounce(string.format("%s burned to death", victimName))
-        elseif deadInfo.DeadType == 7 then
-            System.SendSystemAnnounce(string.format("%s drowned", victimName))
-        elseif deadInfo.DeadType == 8 then
-            System.SendSystemAnnounce(string.format("%s died in a tower boss", victimName))
+
+            if deadInfo.DeadType == 1 then
+                local killerName = nil
+                if killerType == "Player" then
+                    killerName = Player.GetName(deadInfo.LastAttacker:GetPalPlayerController())
+                else 
+                    local debugName = Monster.GetDebugName(deadInfo.LastAttacker)
+        
+                    if killerType == "WildNPC" then
+                        killerName = Npcs[debugName]
+                    else
+                        killerName = Pals[debugName]
+                    end
+                end
+                System.SendSystemAnnounce(string.format("%s was killed by %s", victimName, killerName))
+            elseif deadInfo.DeadType == 2 then
+                System.SendSystemAnnounce(string.format("%s perished himself", victimName))
+            elseif deadInfo.DeadType == 3 then
+                System.SendSystemAnnounce(string.format("%s died to extreme weather", victimName))
+            elseif deadInfo.DeadType == 4 or deadInfo.DeadType == 9 then
+                System.SendSystemAnnounce(string.format("%s hit the ground too hard", victimName))
+            elseif deadInfo.DeadType == 5 then
+                System.SendSystemAnnounce(string.format("%s poisoned to death", victimName))
+            elseif deadInfo.DeadType == 6 then
+                System.SendSystemAnnounce(string.format("%s burned to death", victimName))
+            elseif deadInfo.DeadType == 7 then
+                System.SendSystemAnnounce(string.format("%s drowned", victimName))
+            elseif deadInfo.DeadType == 8 then
+                System.SendSystemAnnounce(string.format("%s died in a tower boss", victimName))
+            end
         end
     end
 end)
