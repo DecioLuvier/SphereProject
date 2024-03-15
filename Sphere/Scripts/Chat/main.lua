@@ -120,7 +120,7 @@ RegisterHook("/Game/Pal/Blueprint/Component/DamageReaction/BP_AIADamageReaction.
         local victimType = System.GetInstanceType(deadInfo.SelfActor)
         local killerType = System.GetInstanceType(deadInfo.LastAttacker)
 
-        if true then
+        if (victimType == "Player") or (victimType == "Player" and killerType == "Player") then
             Logger.Log(string.format("%s death to %s", deadInfo.SelfActor:GetFullName(),deadInfo.LastAttacker:GetFullName()))
 
             local victimName = "Undefined"
@@ -138,7 +138,6 @@ RegisterHook("/Game/Pal/Blueprint/Component/DamageReaction/BP_AIADamageReaction.
                 elseif killerType == "Player" then
                     killerText = Player.GetName(deadInfo.LastAttacker:GetPalPlayerController())
                 elseif killerType == "BaseCampPal" then
-                    Debugger.print(deadInfo.LastAttacker)
                     killerText =  string.format("palbox defenders")
                 elseif killerType == "PalMonster" then
                     killerText =  string.format("wild %s", Monster.GetDebugName(deadInfo.LastAttacker))
