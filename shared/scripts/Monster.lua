@@ -6,7 +6,7 @@ local Pals = require("enums/Pals")
 local PalsFruitsSkills = require("enums/PalsFruitsSkills")
 local PalsLevelSkills = require("enums/PalsLevelSkills")
 local Skills = require("enums/Skills")
-
+local Npcs = require("enums/Npcs")
 
 local Monster = {}
 
@@ -19,12 +19,12 @@ function Monster.GetDebugName(Monster)
     local PalDebugName = saveParameter.CharacterID:ToString()
     local NPCDebugName = saveParameter.UniqueNPCID:ToString()
 
-    if PalDebugName ~= "" then
-        return PalDebugName
+    if Pals[PalDebugName] then
+        return Pals[PalDebugName]
     elseif NPCDebugName ~= "" then
-        return NPCDebugName
+        return NPCDebugName   --Sus
     else
-        return nil
+        return "Undefined"
     end
 end
 

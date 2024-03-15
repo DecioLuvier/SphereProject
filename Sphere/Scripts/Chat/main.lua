@@ -112,47 +112,40 @@ RegisterHook("/Script/Pal.PalPlayerController:OnDestroyPawn", function(self)
     end
 end)
 
-
 local Monster = require("scripts/Monster")
-local Pals = require("enums/Pals")
-local Npcs = require("enums/Npcs")
 
 RegisterHook("/Game/Pal/Blueprint/Component/DamageReaction/BP_AIADamageReaction.BP_AIADamageReaction_C:OnDead", function(argument1, argument2)
     if SphereGlobal.database.Configs.BroadcastDeath then
         local deadInfo = argument2:get() ---@type FPalDeadInfo
-
         local victimType = System.GetInstanceType(deadInfo.SelfActor)
         local killerType = System.GetInstanceType(deadInfo.LastAttacker)
 
-        if (victimType == "Player") or (victimType == "Player" and killerType == "Player") then
+        if true then
+            Logger.Log(string.format("%s death to %s", deadInfo.SelfActor:GetFullName(),deadInfo.LastAttacker:GetFullName()))
 
-            local victimName = nil
+            local victimName = "Undefined"
             if victimType == "Player" then
                 victimName = Player.GetName(deadInfo.SelfActor:GetPalPlayerController())
             else 
-                local debugName = Monster.GetDebugName(deadInfo.SelfActor)
-
-                if victimType == "WildNPC" then
-                    victimName = Npcs[debugName]
-                else
-                    victimName = Pals[debugName]
-                end
+                victimName = Monster.GetDebugName(deadInfo.SelfActor)
             end
 
             if deadInfo.DeadType == 1 then
-                local killerName = nil
-                if killerType == "Player" then
-                    killerName = Player.GetName(deadInfo.LastAttacker:GetPalPlayerController())
-                else 
-                    local debugName = Monster.GetDebugName(deadInfo.LastAttacker)
-        
-                    if killerType == "WildNPC" then
-                        killerName = Npcs[debugName]
-                    else
-                        killerName = Pals[debugName]
-                    end
-                end
-                System.SendSystemAnnounce(string.format("%s was killed by %s", victimName, killerName))
+                local killerText = "Undefined"
+
+                if killerType == "Otomo" then
+                    killerText = string.format("%s using %s",Player.GetName(deadInfo.LastAttacker:GetCharacterParameterComponent().Trainer:GetPalPlayerController()), Monster.GetDebugName(deadInfo.LastAttacker))
+                elseif killerType == "Player" then
+                    killerText = Player.GetName(deadInfo.LastAttacker:GetPalPlayerController())
+                elseif killerType == "BaseCampPal" then
+                    Debugger.print(deadInfo.LastAttacker)
+                    killerText =  string.format("palbox defenders")
+                elseif killerType == "PalMonster" then
+                    killerText =  string.format("wild %s", Monster.GetDebugName(deadInfo.LastAttacker))
+                elseif killerType == "WildNPC" then
+                    killerText =  string.format("npc %s", Monster.GetDebugName(deadInfo.LastAttacker))
+                end 
+                System.SendSystemAnnounce(string.format("%s was killed by %s", victimName, killerText))
             elseif deadInfo.DeadType == 2 then
                 System.SendSystemAnnounce(string.format("%s perished himself", victimName))
             elseif deadInfo.DeadType == 3 then
@@ -168,6 +161,7 @@ RegisterHook("/Game/Pal/Blueprint/Component/DamageReaction/BP_AIADamageReaction.
             elseif deadInfo.DeadType == 8 then
                 System.SendSystemAnnounce(string.format("%s died in a tower boss", victimName))
             end
+
         end
     end
 end)

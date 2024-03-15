@@ -27,10 +27,10 @@ function System.GetInstanceType(instance)
 
     if instance == nil then
         return "Undefined"
-    elseif instance:IsPlayerControlled() then
-        return "Player"
     elseif PalUtility:IsOtomo(instance) then
         return "Otomo"
+    elseif instance:IsPlayerControlled() then
+        return "Player"
     elseif PalUtility:IsBaseCampPal(instance) then
         return "BaseCampPal"
     elseif PalUtility:IsPalMonster(instance) then 
