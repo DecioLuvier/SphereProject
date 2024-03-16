@@ -2,7 +2,7 @@ local Logger = require("libs/Logger")
 Logger.Initialize()
 local DataManager = require("DataManager/main")
 
-Logger.print("Version: V2.5 03/11/2024")
+Logger.print("Version: V2.7 03/16/2024")
 Logger.print("Starting...")
 
 SphereGlobal = {}
@@ -24,6 +24,7 @@ if validDataManager then
         Logger.print("#minhon.")
         Logger.print("#proj1w420")
         Logger.print("#.mathayus")
+        Logger.print("#gamblotwitch")
         Logger.print("https://discord.gg/cS62fmW6TF")
         Logger.print("--------")
     end
