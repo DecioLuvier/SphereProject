@@ -16,9 +16,7 @@ PalLuaApi.Logger = require("libs/Logger")
 PalLuaApi.Manager = require("libs/Manager")
 PalLuaApi.Utilities = require("libs/Utilities")
 PalLuaApi.Validator = require("libs/Validator")
-PalLuaApi.Debugger = require("libs/Debugger")
 PalLuaApi.Logger.Print("Starting Sphere")
-PalLuaApi.Logger.Log("Starting Sphere")
 
 LoopAsync(100, function()
     if not FindFirstOf("World"):IsValid() then
@@ -31,7 +29,6 @@ LoopAsync(100, function()
         return false
     end
     PalLuaApi.Logger.Print(string.format("Found %s", tryWorld))
-    PalLuaApi.Logger.Log(string.format("Found %s", tryWorld))
 
     PalLuaApi.Static = require("classes/Static")
     PalLuaApi.Player = require("classes/Player")

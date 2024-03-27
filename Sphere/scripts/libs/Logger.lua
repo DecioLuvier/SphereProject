@@ -12,11 +12,9 @@ local function ConvertArray(array, depth)
         local depthCharacters = string.rep(" ", depth)
         if type(value) == "table" then
             self.Print(string.format("%sKey: %s", depthCharacters, key))
-            self.Log(string.format("%sKey: %s", depthCharacters, key))
             ConvertArray(value, depth + 2)
         else
             self.Print(string.format("%s%s %s", depthCharacters, key, tostring(value)))
-            self.Log(string.format("%s%s %s", depthCharacters, key, tostring(value)))
         end
     end
 end
@@ -27,6 +25,7 @@ function self.Print(message)
         ConvertArray(message)
     else
         io.stdout:write(string.format("%s %s %s\n",  os.date("%H:%M:%S"), self.consolePrefix, message))
+        self.Log(message)
     end
 end
 

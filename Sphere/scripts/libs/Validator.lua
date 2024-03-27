@@ -29,7 +29,7 @@ function validation.is_string(validator)
   return function(value, key, data)
 
     if type(value) ~= 'string' then
-      return false, 'is not a text'
+      return false, 'is not a text(THIS IS NOT A SPHERE BUG)'
     elseif validator then
       return validator(value, key, data)
     else
@@ -43,7 +43,7 @@ function validation.is_integer(validator)
   return function(value, key, data)
 
     if type(value) ~= 'number' or value%1 ~= 0 then
-      return false, 'is not a integer'
+      return false, 'is not a integer(THIS IS NOT A SPHERE BUG)'
     elseif validator then
       return validator(value, key, data)
     else
@@ -57,7 +57,7 @@ function validation.is_number(validator)
   return function(value, key, data)
 
     if type(value) ~= 'number' then
-      return false, 'is not a number'
+      return false, 'is not a number(THIS IS NOT A SPHERE BUG)'
     elseif validator then
       return validator(value, key, data)
     else
@@ -71,7 +71,7 @@ function validation.is_positive(validator)
   return function(value, key, data)
 
     if value < 0 then
-      return false, 'is negative'
+      return false, 'is negative(THIS IS NOT A SPHERE BUG)'
     elseif validator then
       return validator(value, key, data)
     else
@@ -85,7 +85,7 @@ function validation.is_boolean(validator)
   return function(value, key, data)
     
     if type(value) ~= 'boolean' then
-      return false, 'is not true or false'
+      return false, 'is not true or false(THIS IS NOT A SPHERE BUG)'
     elseif validator then
       return validator(value, key, data)
     else
@@ -110,7 +110,7 @@ function validation.is_array(validator)
         end
       end
     else
-      table.insert(err_array, 'is not an array')
+      table.insert(err_array, 'is not an array(THIS IS NOT A SPHERE BUG)')
     end
 
     if next(err_array) == nil then
@@ -131,7 +131,7 @@ function validation.is_table(schema)
 
       if not err then err = {} end
       result = false
-      table.insert(err, "is not a table.")
+      table.insert(err, "is not a table.(THIS IS NOT A SPHERE BUG)")
     else
       result, err = validation.is_table_implementation(value, schema)
     end
@@ -144,7 +144,7 @@ function validation.is_KeyOfList(list, validator)
   return function(value, key, data)
 
     if not list[value] then
-      return false, "is not valid"
+      return false, string.format("%s is not valid(THIS IS NOT A SPHERE BUG)", value)
     elseif validator then
       return validator(value, key, data)
     else
@@ -168,7 +168,7 @@ end
 function validation.required(validator)
   return function(value, key, data)
     if value == nil then 
-      return false, "is required and was not found"
+      return false, "is required and was not found(THIS IS NOT A SPHERE BUG)"
     else
       return validator(value, key, data)
     end
@@ -181,7 +181,7 @@ function validation.array_max(size,validator)
   return function(value, key, data)
 
     if key > size then 
-      return false, "exceeded the maximum number of elements"
+      return false, "exceeded the maximum number of elements(THIS IS NOT A SPHERE BUG)"
     elseif validator then
       return validator(value, key, data)
     else
@@ -197,7 +197,7 @@ function validation.in_range(lower, upper,validator)
   return function(value, key, data)
 
     if value < lower or value > upper then
-      return false, string.format("is not within the specified range [%d, %d]", lower, upper)
+      return false, string.format("is not within the specified range [%d, %d](THIS IS NOT A SPHERE BUG)", lower, upper)
     elseif validator then
       return validator(value, key, data)
     else
@@ -211,7 +211,7 @@ function validation.is_table_implementation(data, schema)
   for key in pairs(data) do
 
     if schema[key] == nil then
-      errs[key] = 'is not allowed.'
+      errs[key] = 'is not allowed.(THIS IS NOT A SPHERE BUG)'
     end
   end
   for key in pairs(schema) do

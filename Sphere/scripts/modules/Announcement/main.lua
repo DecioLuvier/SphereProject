@@ -25,6 +25,8 @@ function self.OnCompleteInitializeParameter(PlayerCharacter)
         
         if PalLuaApi.Modules.Announcement.database.Config.data.ShowAnnouncementsOnConsole then
             PalLuaApi.Logger.Print(message)
+        else
+            PalLuaApi.Logger.Log(message)
         end
         PalLuaApi.System.SendSystemAnnounce(message)
     end
@@ -39,6 +41,8 @@ function self.OnDestroyPawn(PlayerController)
     
             if PalLuaApi.Modules.Announcement.database.Config.data.ShowAnnouncementsOnConsole then
                 PalLuaApi.Logger.Print(message)
+            else
+                PalLuaApi.Logger.Log(message)
             end
             PalLuaApi.System.SendSystemAnnounce(message)
         end
@@ -97,7 +101,10 @@ function self.OnDead(DeadInfo)
 
             if PalLuaApi.Modules.Announcement.database.Config.data.ShowAnnouncementsOnConsole then
                 PalLuaApi.Logger.Print(message)
+            else
+                PalLuaApi.Logger.Log(message)
             end
+
             PalLuaApi.System.SendSystemAnnounce(message)
         end
     end

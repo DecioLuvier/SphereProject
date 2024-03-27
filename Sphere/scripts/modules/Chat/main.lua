@@ -51,9 +51,10 @@ function self.EnterChat_Receive(PalPlayerState, ChatMessage)
         messageTypeText = Translation.Say
     end
 
-    PalLuaApi.Logger.Log(string.format("%s %s: %s", messageTypeText, sender, message))
     if Config.ShowGameChatOnConsole then
         PalLuaApi.Logger.Print(string.format("%s %s: %s", messageTypeText, sender, message))
+    else
+        PalLuaApi.Logger.Log(string.format("%s %s: %s", messageTypeText, sender, message))
     end
 
     if string.match(message, "^/") then 
