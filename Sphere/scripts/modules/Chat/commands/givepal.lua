@@ -26,19 +26,18 @@ function self.execute(Sender, Arguments)
         if Arguments[3] then
             targetPlayer = PalLuaApi.Player.GetControllerById(tonumber(Arguments[2]))
             dataMonsterName = Arguments[3]
-        else
-            if targetPlayer then
-                local dataMonster = PalLuaApi.Utilities.GetFirstTableValue(PalLuaApi.Modules.MonsterSpawner.database.Monster.data, dataMonsterName)
+        end
+        if targetPlayer then
+            local dataMonster = PalLuaApi.Utilities.GetFirstTableValue(PalLuaApi.Modules.MonsterSpawner.database.Monster.data, dataMonsterName)
 
-                if dataMonster then
-                    PalLuaApi.Modules.MonsterSpawner.Spawn(dataMonster, PalLuaApi.Player.GetLocation(Sender), PalLuaApi.Modules.MonsterSpawner.CallbackCaptureToPlayer, { Sender.Character })
-                    message = translation.Success
-                else
-                    message = translation.Invalid
-                end
+            if dataMonster then
+                PalLuaApi.Modules.MonsterSpawner.Spawn(dataMonster, PalLuaApi.Player.GetLocation(Sender), PalLuaApi.Modules.MonsterSpawner.CallbackCaptureToPlayer, { Sender.Character })
+                message = translation.Success
             else
-                message = translation.TargetNotFound
+                message = translation.Invalid
             end
+        else
+            message = translation.TargetNotFound
         end
     end
 

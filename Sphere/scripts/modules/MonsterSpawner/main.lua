@@ -158,10 +158,10 @@ function self.FindIndividualHandle(PalSpawner)
                 end
             end
 
-            if WildHPMultiplier then
+            if WildHPMultiplier and (PostCallback ~= self.CallbackCaptureToPlayer) then
                 SaveParameter.HP.Value = SaveParameter.HP.Value * WildHPMultiplier
             end
-            
+        
 
             PostCallback(spawnedInstance, table.unpack(CallbackParameters))
         end
