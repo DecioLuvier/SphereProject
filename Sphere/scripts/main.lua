@@ -17,6 +17,18 @@ PalLuaApi.Manager = require("libs/Manager")
 PalLuaApi.Utilities = require("libs/Utilities")
 PalLuaApi.Validator = require("libs/Validator")
 PalLuaApi.Logger.Print("Starting Sphere")
+PalLuaApi.Logger.Print("Version: V3.0 03/27/2024")
+PalLuaApi.Logger.Print("--------")
+PalLuaApi.Logger.Print("Our plugin will always be free!")
+PalLuaApi.Logger.Print("Creator: Decio Luvier (#pw_another)")
+PalLuaApi.Logger.Print("Special thanks to Patreon supporters:")
+PalLuaApi.Logger.Print("#gamblotwitch")
+PalLuaApi.Logger.Print("#.mathayus")
+PalLuaApi.Logger.Print("#miaoxu15121996")
+PalLuaApi.Logger.Print("#proj1w420")
+PalLuaApi.Logger.Print("https://discord.gg/cS62fmW6TF")
+PalLuaApi.Logger.Print("--------")
+
 
 LoopAsync(100, function()
     if not FindFirstOf("World"):IsValid() then
