@@ -32,7 +32,7 @@ self.default = {
     KitUsage = "Usage: /kit SteamIDorUID DataKitName or /kit DataKitName",
     SpawnUsage = "Usage: /spawn DataPalName(Sphere/Data/Pals)",
     GivePalUsage = "Usage: /gpal SteamIDorUID or /gpal DataPalName(Sphere/Data/Pals)",
-    CheckConsole = "You should see the console to see the result.",
+    CheckConsole = "You should see the console or logs to see the result.",
     CommandsAvailable = "You can use the following commands:"
 }
 
