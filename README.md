@@ -4,22 +4,8 @@ Sphere is an open-source server-oriented plugin written in Lua for Palworld. It 
 ## Setup for Pull requests
 To enhance your Lua development experience and align it with the standards of the GitHub repository, follow these steps to configure your environment:
 
-### Install Visual Studio Code Emmylua Extension
-   1. Make sure you have JDK 17 or higher.
-   2. Open VS Code and press `Ctrl+Shift+X` to open the Extensions view.
-   3. Search for `tangzx.emmylua` and install.
-
-### Configure Visual Studio Code
-   1. Press `Ctrl+,` to open VS Code settings.
-   2. Search for `@ext:tangzx.emmylua`.
-   3. Locate `ParameterValidation`.
-   4. Enable it.
-
-### Generate Palworld classes and lua types
-   1. Open your PalServer and the UE4SS Debugging Tools will show.
-   2. In the header, navigate to `Dumpers > Generate Lua types`.
-   3. Now you should find countless files in the `shared/types` folder.
-   4. Get the Ue4ss [types](https://github.com/UE4SS-RE/RE-UE4SS/blob/b29b40f79ccc08da1e264a85907446da51934d97/assets/Mods/shared/Types.lua#L4) and put in the same folder
+### Is no longer maintained
+It was a project that took about six months and was a lot of fun. A huge thank you to CurseForge for the award!
 
 # Special Thanks
 I would like to extend special thanks to the members of the [UE4SS](https://discord.com/invite/7qhRGHF9Tt) Discord server who generously shared their knowledge and helped answer my questions, making this project possible.
