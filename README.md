@@ -1,9 +1,6 @@
 # [Sphere - A PalServer plugin](https://www.curseforge.com/palworld/lua-code-mods/sphere)
 Sphere is an open-source server-oriented plugin written in Lua for Palworld. It empowers game administrators with commands, such as summoning pals, distributing item kits, and opening up exciting possibilities for the future!
 
-## Setup for Pull requests
-To enhance your Lua development experience and align it with the standards of the GitHub repository, follow these steps to configure your environment:
-
 ### Is no longer maintained
 It was a project that took about six months and was a lot of fun. A huge thank you to CurseForge for the award!
 
